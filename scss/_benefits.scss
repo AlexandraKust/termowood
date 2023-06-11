@@ -1,0 +1,121 @@
+.benefits {
+	padding: 23.4rem 0 8rem;
+
+	&__row {
+		align-items: stretch;
+		justify-content: space-between;
+	}
+
+	&__left {
+		position: relative;
+		flex: 0 0 67rem;
+	}
+
+	&__title {
+		position: sticky;
+		top: 14rem;
+		left: 0;
+	}
+
+	&__list {
+		flex: 0 0 67rem;
+		padding: 4.6rem 0 0 3.3rem;
+		display: flex;
+		flex-direction: column;
+		gap: 5.2rem;
+		counter-reset: num;
+		list-style: none;
+	}
+
+	&__item {
+		counter-increment: num;
+		position: relative;
+		padding-top: 4rem;
+
+		&::before {
+			content: counter(num);
+			position: absolute;
+			left: -3.4rem;
+			top: 0;
+			font-weight: 700;
+			font-size: 3.2rem;
+			line-height: 4rem;
+			color: $accent-color-2;
+		}
+
+		&:nth-child(-n+9):before {
+			content: "0" counter(num);
+		}
+	}
+
+	&__name {
+		margin-bottom: 2.4rem;
+		font-weight: 700;
+		font-size: 3.2rem;
+		line-height: 4rem;
+	}
+
+	&__descr {
+		font-size: 1.8rem;
+		line-height: 156%;
+
+		&:not(:last-of-type) {
+			margin-bottom: 2rem;
+		}
+
+		&:last-of-type {
+			color: $accent-color-2;
+		}
+	}
+}
+
+@media (max-width:768px) {
+	.benefits {
+		padding: 6.4rem 0 3.2rem;
+
+		&__row {
+			flex-direction: column;
+		}
+
+		&__left {
+			flex-basis: auto;
+		}
+
+		&__title {
+			position: static;
+			margin-bottom: 4rem;
+		}
+
+		&__list {
+			flex-basis: auto;
+			padding: 0 0 0 2.4rem;
+			gap: 2.4rem;
+		}
+
+		&__item {
+			padding-top: 2.3rem;
+
+			&::before {
+				left: -2.4rem;
+				font-size: 2.3rem;
+				line-height: 2.9rem;
+			}
+		}
+
+		&__name {
+			margin-bottom: 1.6rem;
+			font-size: 2.3rem;
+			line-height: 2.9rem;
+		}
+
+		&__descr {
+			font-size: 1.6rem;
+			line-height: 150%;
+
+			&:not(:last-of-type) {
+				margin-bottom: 0.8rem;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,92 @@
+.footer {
+	padding: 3.7rem;
+	background-color: #fff;
+
+	&__row {
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__info {
+		align-items: center;
+		gap: 3rem;
+	}
+
+	&__logo {
+		flex: 0 0 8.2rem;
+		width: 8.2rem;
+	}
+
+	&__descr {
+		flex: 0 0 31.5rem;
+		width: 31.5rem;
+		font-size: 1.2rem;
+		line-height: 1.6rem;
+		color: $gray-3;
+
+		b {
+			font-weight: 700;
+		}
+	}
+
+	&__rights {
+		display: flex;
+		flex-direction: column;
+		gap: 0.8rem;
+	}
+
+	&__link {
+		font-size: 1.2rem;
+		line-height: 1.5rem;
+		text-decoration-line: underline;
+		color: $accent-color-2;
+		transition: text-decoration 0.3s ease-in-out;
+
+		&:hover {
+			cursor: pointer;
+			text-decoration: none;
+		}
+	}
+
+	&__text,
+	&__author {
+		font-size: 1.2rem;
+		line-height: 1.5rem;
+		color: $gray-3;
+	}
+}
+
+@media (max-width: 768px) {
+	.footer {
+		padding: 6.4rem 0 5.4rem;
+
+		&__row {
+			flex-direction: column;
+			align-items: start;
+			gap: 2.4rem;
+		}
+
+		&__info {
+			gap: 2rem;
+			align-items: start;
+		}
+
+		&__logo {
+			flex-basis: 7.5rem;
+			width: 7.5rem;
+		}
+
+		&__descr {
+			flex-basis: 18.1rem;
+			width: 18.1rem;
+		}
+
+		&__link {
+			text-align: left;
+		}
+
+		&__text {}
+
+		&__author {}
+	}
+}

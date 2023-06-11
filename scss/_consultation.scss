@@ -1,0 +1,157 @@
+.consultation {
+	position: relative;
+	padding: 24.3rem 0 16.3rem;
+	background: $main-color url('../media/img/consultation.png') center bottom / 100% auto no-repeat;
+	color: #fff;
+
+	&__title {
+		margin-bottom: 8.4rem;
+		color: #fff;
+	}
+
+	&__name {
+		position: absolute;
+		bottom: 5.9rem;
+		left: 56rem;
+		width: 19.3rem;
+		font-size: 1.6rem;
+		line-height: 2rem;
+
+		span {
+			display: block;
+			font-weight: 500;
+			font-size: 2rem;
+			line-height: 2.5rem;
+		}
+	}
+
+	&__row {
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__content {
+		flex: 0 0 67rem;
+	}
+
+	&__caption {
+		margin-bottom: 3.2rem;
+		font-weight: 500;
+		font-size: 4rem;
+		line-height: 5rem;
+	}
+
+	&__item {
+		position: relative;
+		padding-left: 2.2rem;
+		font-size: 2.4rem;
+		line-height: 3rem;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 0.6rem;
+			height: 0.6rem;
+			border-radius: 50%;
+			background-color: $accent-color-2;
+			transform: translateY(-50%);
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 1.6rem;
+		}
+	}
+
+	&__form {
+		flex: 0 0 42.4rem;
+	}
+
+	&__heading {
+		margin-bottom: 3.2rem;
+		font-weight: 500;
+		font-size: 3.2rem;
+		line-height: 4rem;
+	}
+
+	&__btn {
+		width: 100%;
+		margin-bottom: 1.4rem;
+	}
+}
+
+@media (max-width:768px) {
+	.consultation {
+		padding: 8.5rem 0 37.4rem;
+		background-size: 305% auto;
+		background-position: 62% bottom;
+
+		&__title {
+			margin-bottom: 3.2rem;
+		}
+
+		&__name {
+			bottom: 26.7rem;
+			left: auto;
+			right: 3.2rem;
+			width: 14rem;
+			font-size: 1.2rem;
+			line-height: 1.5rem;
+
+			span {
+				font-size: 1.6rem;
+				line-height: 2rem;
+			}
+		}
+
+		&__row {
+			flex-direction: column;
+		}
+
+		&__content {
+			flex-basis: auto;
+		}
+
+		&__caption {
+			margin-bottom: 2rem;
+			font-size: 2.3rem;
+			line-height: 2.9rem;
+		}
+
+		&__list {
+			margin-bottom: 4rem;
+		}
+
+		&__item {
+			font-size: 1.6rem;
+			line-height: 2rem;
+
+			&:not(:last-child) {
+				margin-bottom: 1.2rem;
+			}
+		}
+
+		&__form {
+			flex-basis: auto;
+
+			.input {
+				margin-bottom: 1.2rem;
+			}
+		}
+
+		&__heading {
+			margin-bottom: 1.2rem;
+			font-size: 2.3rem;
+			line-height: 2.9rem;
+		}
+
+		&__btn {
+			margin-bottom: 0.4rem;
+		}
+
+		&__agree {
+			margin-left: 1.1rem;
+		}
+	}
+}

@@ -1,0 +1,141 @@
+.cooperation {
+	padding: 9.5rem 0 12rem;
+	background: #fff;
+
+	&__title {
+		margin-bottom: 4.8rem;
+	}
+
+	&__row {
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 7rem;
+	}
+
+	&__caption {
+		flex: 0 0 40rem;
+		font-weight: 500;
+		font-size: 4rem;
+		line-height: 5rem;
+	}
+
+	&__pay {
+		width: fit-content;
+	}
+
+	&__item {
+		gap: 2rem;
+		padding: 0 3.7rem;
+		align-items: center;
+		flex: 0 0 32rem;
+		width: 32rem;
+
+		&:first-child {
+			flex-basis: 41rem;
+			width: 41rem;
+			padding-right: 2rem;
+		}
+	}
+
+	&__img {
+		flex: 0 0 auto;
+		width: auto;
+		height: 5rem;
+
+		&:first-child {
+			width: 5rem;
+			height: auto;
+		}
+	}
+
+	&__text {
+		font-size: 2rem;
+		line-height: 2.5rem;
+	}
+
+	&__bottom {
+		align-items: center;
+		gap: 2rem;
+	}
+
+	&__descr {
+		font-weight: 500;
+		font-size: 2.4rem;
+		line-height: 3rem;
+		color: $accent-color-2;
+	}
+}
+
+@media (max-width:768px) {
+	.cooperation {
+		padding: 5.4rem 0;
+
+		&__title {
+			margin-bottom: 2.1rem;
+		}
+
+		&__row {
+			flex-direction: column;
+			margin-bottom: 3.6rem;
+		}
+
+		&__caption {
+			flex-basis: auto;
+			margin-bottom: 1.8rem;
+			font-size: 2.3rem;
+			line-height: 2.9rem;
+		}
+
+		&__pay {
+			flex-direction: column;
+			width: 100%;
+			border: 0.1rem solid $gray-2;
+		}
+
+		&__item {
+			padding: 1.2rem 1.6rem;
+			flex-basis: auto;
+			width: 100%;
+			min-height: 10.1rem;
+
+			&:first-child {
+				flex-basis: auto;
+				width: 100%;
+			}
+
+			&:not(:last-child) {
+				border-bottom: 0.1rem solid $gray-2;
+			}
+		}
+
+		&__img {
+			flex-basis: 3.2rem;
+			width: 3.2rem;
+			height: auto;
+
+			&:first-child {
+				width: 3.2rem;
+			}
+		}
+
+		&__text {
+			font-size: 1.6rem;
+			line-height: 2rem;
+		}
+
+		&__bottom {
+			flex-direction: column;
+			gap: 1.2rem;
+		}
+
+		&__descr {
+			font-size: 1.6rem;
+			line-height: 2rem;
+			text-align: center;
+		}
+
+		&__btn {
+			padding: 2.2rem;
+		}
+	}
+}

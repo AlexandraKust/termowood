@@ -1,0 +1,245 @@
+.about {
+	margin-left: 8rem;
+	padding: 5rem 0 8.5rem;
+	background-color: $gray-2;
+
+	.container {
+		margin-left: 9.5rem;
+	}
+
+	&__title {
+		margin-bottom: 5rem;
+		font-size: 6.4rem;
+		line-height: 8rem;
+	}
+
+	&__info {
+		position: relative;
+		width: auto;
+		margin: 0 0 14rem -17.3rem;
+	}
+
+	&__img {
+		width: 100%;
+		height: 75rem;
+	}
+
+	&__descr {
+		position: absolute;
+		right: 0;
+		bottom: -6.2rem;
+		z-index: 2;
+		width: 103.5rem;
+		padding: 6rem 5.8rem;
+		background-color: $main-color;
+		color: #fff;
+	}
+
+	&__name {
+		margin-bottom: 1.2rem;
+		font-weight: 700;
+		font-size: 2.6rem;
+		line-height: 3.2rem;
+	}
+
+	&__text {
+		font-size: 2.6rem;
+		line-height: 3.2rem;
+	}
+
+	&__bottom {
+		position: relative;
+		align-items: start;
+	}
+
+	&__results {
+		margin-left: 7rem;
+		flex: 0 0 83rem;
+		justify-content: space-between;
+		align-items: start;
+	}
+
+	&__item {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__number {
+		margin-bottom: 0.3rem;
+		font-size: 2.6rem;
+		line-height: 3.3rem;
+
+		span {
+			font-weight: 500;
+			font-size: 9rem;
+			line-height: 1;
+		}
+	}
+
+	&__label {
+		width: 16.7rem;
+		font-size: 1.6rem;
+		line-height: 2rem;
+		text-align: center;
+	}
+
+	&__swiper {
+		position: absolute;
+		right: 14.6rem;
+		bottom: -23.5rem;
+	}
+
+	&__wrapper {
+		width: 27rem;
+	}
+
+	&__slide {
+		width: 27rem;
+		height: 38.2rem;
+		border-radius: 0.2rem;
+		overflow: hidden;
+
+		&:not(:last-child) {
+			margin-right: 3rem;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+
+	&__arrows {
+		position: absolute;
+		right: 0;
+		bottom: -23.5rem;
+		align-self: self-end;
+		gap: 1.2rem;
+
+		.slider-btn {
+			width: 4.8rem;
+			height: 4.8rem;
+		}
+	}
+}
+
+@media (max-width:768px) {
+	.about {
+		margin-left: 2.2rem;
+		padding: 3.2rem 0;
+
+		.container {
+			margin-left: 0;
+			padding-left: 1.5rem;
+		}
+
+		&__title {
+			margin-bottom: 3rem;
+			font-size: 2.8rem;
+			line-height: 3.5rem;
+		}
+
+		&__info {
+			margin: 0 -2.2rem 0 -5.8rem;
+		}
+
+		&__img {
+			height: 28rem;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+
+		&__descr {
+			position: relative;
+			bottom: 0;
+			width: auto;
+			margin: -5.6rem 0 2rem 6rem;
+			padding: 2.4rem;
+			padding-right: 2.6rem;
+		}
+
+		&__name {
+			font-size: 1.6rem;
+			line-height: 162%;
+		}
+
+		&__text {
+			font-size: 1.6rem;
+			line-height: 162%;
+		}
+
+		&__bottom {
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		&__results {
+			flex-basis: 14rem;
+			width: 14rem;
+			flex-direction: column;
+			margin: 0;
+			gap: 1.7rem;
+		}
+
+		&__item {
+			&:nth-child(2) {
+				order: 3;
+			}
+
+			&:nth-child(3) {
+				order: 2;
+			}
+		}
+
+		&__number {
+			margin-bottom: 0.5rem;
+			font-size: 1.6rem;
+			line-height: 2rem;
+
+			span {
+				font-size: 4rem;
+			}
+		}
+
+		&__label {
+			width: auto;
+			font-size: 1.3rem;
+			line-height: 1.6rem;
+		}
+
+		&__swiper {
+			position: static;
+			margin-bottom: 2.2rem;
+		}
+
+		&__wrapper {
+			width: 11.2rem;
+		}
+
+		&__slide {
+			width: 11.2rem;
+			height: 15.8rem;
+
+			&:not(:last-child) {
+				margin-right: 1.5rem;
+			}
+		}
+
+		&__arrows {
+			position: static;
+			justify-content: center;
+
+			.slider-btn {
+				width: 3.2rem;
+				height: 3.2rem;
+			}
+		}
+	}
+}

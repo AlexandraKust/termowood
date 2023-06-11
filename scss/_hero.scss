@@ -1,0 +1,111 @@
+.hero {
+	position: relative;
+	padding: 22.8rem 0 46.8rem;
+	color: #fff;
+	background: url('../media/img/main-bg.jpg') center / cover no-repeat;
+
+	&__undertitle {
+		align-items: center;
+		gap: 2rem;
+		margin-bottom: 4.1rem;
+	}
+
+	&__icon {
+		flex: 0 0 3.1rem;
+		width: 3.1rem;
+		height: 3.1rem;
+		align-items: center;
+		justify-content: center;
+		border-radius: 0.2rem;
+		border: 0.1rem solid rgba(255, 255, 255, 0.5);
+
+		img {
+			width: 0.8rem;
+			height: auto;
+		}
+	}
+
+	&__text {
+		font-weight: 500;
+		font-size: 2.4rem;
+		line-height: 3rem;
+	}
+
+	&__title {
+		margin-bottom: 4.9rem;
+		font-weight: 700;
+		font-size: 9.6rem;
+		line-height: 104%;
+		color: #fff;
+	}
+
+	&__subtitle {
+		margin-bottom: 4.3rem;
+		max-width: 56.5rem;
+		font-weight: 500;
+		font-size: 2rem;
+		line-height: 140%;
+	}
+
+	&__btn {
+		position: relative;
+		z-index: 2;
+	}
+
+	&__decor {
+		position: absolute;
+		right: 0;
+		bottom: 25.9rem;
+		width: 131.2rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.hero {
+		padding: 11.6rem 0 21.9rem;
+		background: linear-gradient(0deg, rgba(16, 15, 15, 0.6), rgba(16, 15, 15, 0.6)), url('../media/img/main-bg.jpg') center / cover no-repeat;
+		overflow: hidden;
+
+		&__undertitle {
+			gap: 1.2rem;
+			margin-bottom: 1.4rem;
+		}
+
+		&__icon {
+			flex-basis: 2rem;
+			width: 2rem;
+			height: 2rem;
+			border-radius: 0.2rem;
+			border-width: 0.1rem;
+
+			img {
+				width: 0.6rem;
+			}
+		}
+
+		&__text {
+			font-size: 1.3rem;
+			line-height: 1.6rem;
+		}
+
+		&__title {
+			margin-bottom: 2rem;
+			font-size: 3.2rem;
+			line-height: 4rem;
+		}
+
+		&__subtitle {
+			margin-bottom: 2.4rem;
+			max-width: 100%;
+			font-size: 1.3rem;
+			line-height: 1.7rem;
+		}
+
+		&__decor {
+			bottom: 15.8rem;
+			width: 35rem;
+			right: -1.5rem;
+		}
+	}
+
+}
