@@ -50,6 +50,16 @@ button {
 	}
 }
 
+@keyframes loadingBg {
+	0% {
+		background-position: 2%;
+	}
+
+	100% {
+		background-position: 100%;
+	}
+}
+
 .container {
 	max-width: 157rem;
 	margin: 0 auto;
@@ -260,11 +270,14 @@ button {
 	padding: 3.3rem 4rem;
 	border-radius: 10rem;
 	background-color: #fff;
+	font-family: "Cera Pro";
 	font-size: 1.8rem;
 	line-height: 133%;
 	color: black;
 
 	&::placeholder {
+		font-family: inherit;
+		font-weight: inherit;
 		font-family: inherit;
 		font-size: inherit;
 		line-height: inherit;
@@ -487,24 +500,6 @@ button {
 		&.active {
 			display: flex;
 		}
-	}
-}
-
-.hint {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 2rem;
-	width: 100%;
-
-	&__text {
-		color: $gray-2;
-	}
-
-	&__icon {
-		width: 0.625vw;
-		height: 0.677vw;
-		background: url('../media/svg/hand.svg') 0 0 / 100% 100% no-repeat;
 	}
 }
 

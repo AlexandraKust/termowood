@@ -9,7 +9,7 @@ phoneChanges.forEach(function (phoneChange) {
 	var oneJan = new Date(currentdate.getFullYear(), 0, 1);
 	var numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
 	var result = Math.ceil((currentdate.getDay() + 1 + numberOfDays) / 7);
-	if (result % 2 == 1) {
+	if (result % 2 === 1) {
 		phoneFirst.classList.add('d-none');
 		if (phoneLast.classList.contains('d-none')) phoneLast.classList.remove('d-none');
 	} else {
@@ -314,9 +314,9 @@ var dataBlock;
 var activeSlide = [];
 
 $element.on('change input', function (e) {
-	// var value = $(this).val().trim();
-	// isValid = value !== "";
-	// btnActive(!isValid);
+	var value = $(this).val().trim();
+	isValid = value !== "";
+	btnActive(!isValid);
 });
 
 function btnActive(isValid) {
@@ -335,7 +335,8 @@ function btnActive(isValid) {
 
 let quizSingle = document.querySelectorAll('[data-quiz-single-answer]');
 quizSingle.forEach(function (item) {
-	let inputs = item.querySelectorAll('input[type="radio"]');
+	// let inputs = item.querySelectorAll('input[type="radio"]');
+	let inputs = item.querySelectorAll('input');
 
 	for (let i = 0; i < inputs.length; i++) {
 		inputs[i].addEventListener("click", function () {
@@ -403,7 +404,9 @@ function btnClick() {
 			$(".quiz__bottom").hide();
 			$(".quiz__right").hide();
 			$(".quiz__progress").hide();
-			$('.js-quiz').text(number);
+			$(".quiz__progress-text").text('<b>Тест пройден на 100%</b>');
+
+			// $('.js-quiz').text(number);
 			setTimeout(function () {
 				quizFinalStep();
 			}, 500)
@@ -418,7 +421,7 @@ function btnClick() {
 btnClick();
 
 var quizFinalStep = function () {
-	$('.quiz__loader').addClass('visible');
+	// $('.quiz__loader').addClass('visible');
 	$('.quiz__body').addClass('blur');
 
 	setTimeout(function () {
@@ -427,11 +430,11 @@ var quizFinalStep = function () {
 
 	setTimeout(function () {
 		$('.quiz__body').removeClass('blur');
-		$('.quiz__loader').removeClass('visible');
+		// $('.quiz__loader').removeClass('visible');
 	}, 1000)
 }
 
-$('input[name^="quiz"]').not('input[name^="quiz2"]').on('change', function () {
+$('input[name^="quiz"]').not('input[name^="quiz4"]').on('change', function () {
 	setTimeout(function () {
 		btnNext.click();
 	}, 500);
@@ -446,39 +449,19 @@ function inputValid(item) {
 	}
 }
 
-let quiz2Inputs = document.querySelectorAll('input[name^="quiz2"]');
-if (quiz2Inputs) {
-	quiz2Inputs.forEach(function (input) {
+let quiz4Inputs = document.querySelectorAll('input[name^="quiz4"]');
+if (quiz4Inputs) {
+	quiz4Inputs.forEach(function (input) {
 		input.oninput = function () {
 			inputValid(input)
 
-			let quiz2InputsChecked = document.querySelectorAll('input[name^="quiz2"].checked');
-			if (quiz2Inputs.length == quiz2InputsChecked.length) {
+			let quiz4InputsChecked = document.querySelectorAll('input[name^="quiz4"].checked');
+			if (quiz4Inputs.length == quiz4InputsChecked.length) {
 				btnNext.prop('disabled', false);
 			} else {
 				btnNext.prop('disabled', true);
 			}
 		};
-	})
-}
-
-let inputCount = document.querySelector('.quiz__input-count');
-if (inputCount) {
-	let inputBtnUp = inputCount.parentNode.querySelector('.input-arrow__up');
-	let inputBtnDown = inputCount.parentNode.querySelector('.input-arrow__down');
-	inputBtnUp.addEventListener('click', function () {
-		event.preventDefault()
-		++inputCount.value
-		inputValid(inputCount)
-		$('.quiz__input-count').trigger("oninput");
-	})
-	inputBtnDown.addEventListener('click', function () {
-		event.preventDefault()
-		if (inputCount.value > 0) {
-			--inputCount.value
-			inputValid(inputCount)
-			$('.quiz__input-count').trigger("oninput");
-		}
 	})
 }
 
@@ -637,7 +620,7 @@ function openPopup(btnOpen, popup) {
 		item.addEventListener('click', function (e) {
 			e.preventDefault();
 			popup.classList.add('active');
-			document.body.classList.add('lock');
+			if (!document.body.classList.add('lock')) document.body.classList.add('lock');
 		});
 	})
 }
@@ -662,7 +645,7 @@ popups.forEach(function (popup) {
 
 function closePopup(popup) {
 	popup.classList.remove('active');
-	document.body.classList.remove('lock');
+	if (!nav.classList.contains('nav--active')) document.body.classList.remove('lock');
 }
 
 
@@ -677,3 +660,54 @@ if (hideTheModal == null) {
 	}, 3000);
 }
 
+const valuesOfWidth = [0, 200, 300, 400, 600, 800, 900, 1000];
+const sliderWidth = document.getElementById('quiz4-1');
+let sliderRowOfNumbers = document.querySelectorAll('.quiz-option__range');
+valuesOfWidth.forEach(function (item) {
+	let p = document.createElement('p');
+	p.className = "quiz-option__number";
+	p.style.left = (100 / valuesOfWidth.length) * valuesOfWidth.indexOf(item) + "%";
+	p.innerHTML = item;
+	sliderRowOfNumbers[0].append(p);
+})
+
+sliderWidth.max = valuesOfWidth.length - 1;
+sliderWidth.oninput = function () {
+	console.log(valuesOfWidth[this.value]);
+};
+sliderWidth.oninput();
+
+const valuesOfLenght = [0, 1000, 1500, 2000, 3000, 3500, 4000, 4500];
+const sliderLenght = document.getElementById('quiz4-2');
+valuesOfLenght.forEach(function (item) {
+	let p = document.createElement('p');
+	p.className = "quiz-option__number";
+	p.style.left = (100 / valuesOfLenght.length) * valuesOfLenght.indexOf(item) + "%";
+	p.innerHTML = item;
+
+	if (!valuesOfLenght.indexOf(item) == 0 || !valuesOfLenght.indexOf(item) == valuesOfLenght.length - 1) {
+		p.style.marginLeft = "-0.6rem";
+	}
+	sliderRowOfNumbers[1].append(p);
+
+})
+
+sliderLenght.max = valuesOfLenght.length - 1;
+sliderLenght.oninput = function () {
+	console.log(valuesOfLenght[this.value]);
+};
+sliderLenght.oninput();
+
+
+const sliderEl = document.querySelectorAll("input[type='range']");
+sliderEl.forEach(function (range) {
+	const tempSliderValue = range.value;
+	const progress = (tempSliderValue / range.max) * 100;
+	range.style.background = `linear-gradient(to right, #42B214 ${progress}%, #cacaca ${progress}%)`;
+
+	range.addEventListener("input", (event) => {
+		const tempSliderValue = event.target.value;
+		const progress = (tempSliderValue / range.max) * 100;
+		range.style.background = `linear-gradient(to right, #42B214 ${progress}%, #cacaca ${progress}%)`;
+	})
+})

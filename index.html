@@ -761,12 +761,385 @@
 		<section class="quiz" id="quiz">
 			<div class="container">
 				<h2 class="quiz__title section-title">Пройдите небольшой тест, и мы подготовим
-					для вас лучшее предложение под вашу задачу
+					для&nbsp;вас лучшее предложение под вашу задачу
 				</h2>
 				<p class="quiz__subtitle">Поможем подобрать&nbsp;то, что действительно вам нужно на&nbsp;100%</p>
 
-				<div class="quiz__body">
+				<div class="quiz__inner animation">
+					<div class="quiz__body flex">
+						<form action="mailer/send.php" method="POST" class="quiz__form" data-form-validate-js>
+							<input type="hidden" name="formname" value="quiz">
+							<div class="quiz__progress">
+								<div class="quiz__progress-bar">
+									<div class="quiz__progress-inner" style="width: 20%;"></div>
+								</div>
+								<p class="quiz__progress-text">
+									<b>Вопрос <span class="js-quiz">1</span></b> из 5
+								</p>
+							</div>
+							<div class="quiz__items">
+								<div class="quiz-item">
+									<input type="hidden" name="title-1" value="Что выбираете?">
+									<h3 class="quiz-item__title fade-in">
+										Что выбираете?
+									</h3>
+									<div class="quiz-options flex" data-quiz-single-answer>
+										<div class="quiz-option">
+											<input type="radio" class="quiz-option__input" name="quiz1" id="quiz1-1" value="Дуб">
+											<div class="quiz-option__wrapper">
+												<div class="quiz-option__img">
+													<img src="media/img/дуб.jpg" alt="Дуб">
+												</div>
+												<div class="quiz-option__wrap flex">
+													<div class="quiz-option__radiobtn">
+													</div>
+													<p class="quiz-option__label">
+														Дуб
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="quiz-option">
+											<input type="radio" class="quiz-option__input" name="quiz1" id="quiz1-2" value="Ясень">
+											<div class="quiz-option__wrapper">
+												<div class="quiz-option__img">
+													<img src="media/img/ясень.jpg" alt="Ясень">
+												</div>
+												<div class="quiz-option__wrap flex">
+													<div class="quiz-option__radiobtn">
+													</div>
+													<p class="quiz-option__label">
+														Ясень
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="quiz-option">
+											<input type="radio" class="quiz-option__input" name="quiz1" id="quiz1-3" value="Еще не определился, 
+											рассматриваю оба варианта">
+											<div class="quiz-option__wrapper">
+												<div class="quiz-option__img">
+													<svg viewBox="0 0 21 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M6.608 22.2874C6.608 21.2102 6.96267 20.1701 7.672 19.1672C8.38133 18.1642 9.50133 17.0127 11.032 15.7126C12.5627 14.3382 13.5893 13.2796 14.112 12.5367C14.6347 11.7937 14.896 10.9208 14.896 9.91789C14.896 8.61779 14.448 7.54057 13.552 6.68622C12.6933 5.83187 11.6293 5.40469 10.36 5.40469C7.82133 5.40469 6.01067 7.00195 4.928 10.1965L0 8.07918C0.784 5.47898 2.09067 3.49169 3.92 2.1173C5.78667 0.705767 8.008 0 10.584 0C13.496 0 15.96 0.910068 17.976 2.7302C19.992 4.5132 21 6.76051 21 9.47214C21 11.0694 20.608 12.5367 19.824 13.8739C19.04 15.174 17.7707 16.5855 16.016 18.1085C14.4107 19.52 13.3467 20.5601 12.824 21.2287C12.3013 21.8602 12.04 22.566 12.04 23.346C12.04 23.7918 12.1147 24.2933 12.264 24.8504H7.224C6.81333 23.9218 6.608 23.0674 6.608 22.2874ZM6.832 36.7742C6.01067 35.957 5.6 34.9355 5.6 33.7097C5.6 32.4839 6.01067 31.4624 6.832 30.6452C7.69067 29.7908 8.736 29.3636 9.968 29.3636C11.2 29.3636 12.2267 29.7722 13.048 30.5894C13.9067 31.4066 14.336 32.4467 14.336 33.7097C14.336 34.9355 13.9067 35.957 13.048 36.7742C12.2267 37.5914 11.2 38 9.968 38C8.736 38 7.69067 37.5914 6.832 36.7742Z" />
+													</svg>
+												</div>
+												<div class="quiz-option__wrap flex">
+													<div class="quiz-option__radiobtn">
+													</div>
+													<p class="quiz-option__label">
+														Еще не определился,
+														рассматриваю оба варианта
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="quiz-item" style="display:none;">
+									<input type="hidden" name="title-2" value="Тип изделия">
+									<h3 class="quiz-item__title fade-in">
+										Тип изделия
+									</h3>
+									<div class="quiz-options flex" data-quiz-single-answer>
+										<div class="quiz-option">
+											<input type="radio" class="quiz-option__input" name="quiz2" id="quiz2-1" value="Цельноламельный">
+											<div class="quiz-option__wrapper">
+												<div class="quiz-option__img">
+													<img src="media/img/Цельноламельный.jpg" alt="Цельноламельный">
+												</div>
+												<div class="quiz-option__wrap flex">
+													<div class="quiz-option__radiobtn">
+													</div>
+													<p class="quiz-option__label">
+														Цельноламельный
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="quiz-option">
+											<input type="radio" class="quiz-option__input" name="quiz2" id="quiz2-2" value="Столярный">
+											<div class="quiz-option__wrapper">
+												<div class="quiz-option__img">
+													<img src="media/img/Столярный.jpg" alt="Столярный">
+												</div>
+												<div class="quiz-option__wrap flex">
+													<div class="quiz-option__radiobtn">
+													</div>
+													<p class="quiz-option__label">
+														Столярный
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="quiz-option">
+											<input type="radio" class="quiz-option__input" name="quiz2" id="quiz2-3" value="Еще не определился, 
+											рассматриваю оба варианта">
+											<div class="quiz-option__wrapper">
+												<div class="quiz-option__img">
+													<svg viewBox="0 0 21 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M6.608 22.2874C6.608 21.2102 6.96267 20.1701 7.672 19.1672C8.38133 18.1642 9.50133 17.0127 11.032 15.7126C12.5627 14.3382 13.5893 13.2796 14.112 12.5367C14.6347 11.7937 14.896 10.9208 14.896 9.91789C14.896 8.61779 14.448 7.54057 13.552 6.68622C12.6933 5.83187 11.6293 5.40469 10.36 5.40469C7.82133 5.40469 6.01067 7.00195 4.928 10.1965L0 8.07918C0.784 5.47898 2.09067 3.49169 3.92 2.1173C5.78667 0.705767 8.008 0 10.584 0C13.496 0 15.96 0.910068 17.976 2.7302C19.992 4.5132 21 6.76051 21 9.47214C21 11.0694 20.608 12.5367 19.824 13.8739C19.04 15.174 17.7707 16.5855 16.016 18.1085C14.4107 19.52 13.3467 20.5601 12.824 21.2287C12.3013 21.8602 12.04 22.566 12.04 23.346C12.04 23.7918 12.1147 24.2933 12.264 24.8504H7.224C6.81333 23.9218 6.608 23.0674 6.608 22.2874ZM6.832 36.7742C6.01067 35.957 5.6 34.9355 5.6 33.7097C5.6 32.4839 6.01067 31.4624 6.832 30.6452C7.69067 29.7908 8.736 29.3636 9.968 29.3636C11.2 29.3636 12.2267 29.7722 13.048 30.5894C13.9067 31.4066 14.336 32.4467 14.336 33.7097C14.336 34.9355 13.9067 35.957 13.048 36.7742C12.2267 37.5914 11.2 38 9.968 38C8.736 38 7.69067 37.5914 6.832 36.7742Z" />
+													</svg>
+												</div>
+												<div class="quiz-option__wrap flex">
+													<div class="quiz-option__radiobtn">
+													</div>
+													<p class="quiz-option__label">
+														Еще не определился,
+														рассматриваю оба варианта
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="quiz-item" style="display:none;">
+									<input type="hidden" name="title-3" value="Выберите толщину изделия">
+									<h3 class="quiz-item__title fade-in">
+										Выберите толщину изделия
+									</h3>
+									<div class="quiz-options flex " data-quiz-single-answer>
+										<div class="quiz-option">
+											<input type="radio" class="quiz-option__input" name="quiz3" id="quiz3-1" value="20мм">
+											<div class="quiz-option__wrapper">
+												<div class="quiz-option__img">
+													<p>20 мм.</p>
+												</div>
+												<div class="quiz-option__wrap flex">
+													<div class="quiz-option__radiobtn">
+													</div>
+													<p class="quiz-option__label">
+														20
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="quiz-option">
+											<input type="radio" class="quiz-option__input" name="quiz3" id="quiz3-2" value="40мм">
+											<div class="quiz-option__wrapper">
+												<div class="quiz-option__img">
+													<p>40 мм.</p>
+												</div>
+												<div class="quiz-option__wrap flex">
+													<div class="quiz-option__radiobtn">
+													</div>
+													<p class="quiz-option__label">
+														40
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="quiz-option">
+											<input type="radio" class="quiz-option__input" name="quiz3" id="quiz3-3" value="Точно не знаю">
+											<div class="quiz-option__wrapper">
+												<div class="quiz-option__img">
+													<svg viewBox="0 0 21 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path
+															d="M6.608 22.2874C6.608 21.2102 6.96267 20.1701 7.672 19.1672C8.38133 18.1642 9.50133 17.0127 11.032 15.7126C12.5627 14.3382 13.5893 13.2796 14.112 12.5367C14.6347 11.7937 14.896 10.9208 14.896 9.91789C14.896 8.61779 14.448 7.54057 13.552 6.68622C12.6933 5.83187 11.6293 5.40469 10.36 5.40469C7.82133 5.40469 6.01067 7.00195 4.928 10.1965L0 8.07918C0.784 5.47898 2.09067 3.49169 3.92 2.1173C5.78667 0.705767 8.008 0 10.584 0C13.496 0 15.96 0.910068 17.976 2.7302C19.992 4.5132 21 6.76051 21 9.47214C21 11.0694 20.608 12.5367 19.824 13.8739C19.04 15.174 17.7707 16.5855 16.016 18.1085C14.4107 19.52 13.3467 20.5601 12.824 21.2287C12.3013 21.8602 12.04 22.566 12.04 23.346C12.04 23.7918 12.1147 24.2933 12.264 24.8504H7.224C6.81333 23.9218 6.608 23.0674 6.608 22.2874ZM6.832 36.7742C6.01067 35.957 5.6 34.9355 5.6 33.7097C5.6 32.4839 6.01067 31.4624 6.832 30.6452C7.69067 29.7908 8.736 29.3636 9.968 29.3636C11.2 29.3636 12.2267 29.7722 13.048 30.5894C13.9067 31.4066 14.336 32.4467 14.336 33.7097C14.336 34.9355 13.9067 35.957 13.048 36.7742C12.2267 37.5914 11.2 38 9.968 38C8.736 38 7.69067 37.5914 6.832 36.7742Z" />
+													</svg>
+												</div>
+												<div class="quiz-option__wrap flex">
+													<div class="quiz-option__radiobtn">
+													</div>
+													<p class="quiz-option__label">
+														Точно не знаю
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="quiz-item quiz-item--range" style="display:none;">
+									<input type="hidden" name="title-4-1" value="Ширина изделия (мм)">
+									<h3 class="quiz-item__title fade-in">
+										Ширина изделия (мм)
+									</h3>
+									<div class="quiz-options flex">
+										<div class="quiz-option">
+											<input type="range" min="0" max="1000" value="5" class="quiz-option__input" name="quiz4"
+												id="quiz4-1">
+											<div class="quiz-option__range flex"></div>
+										</div>
+									</div>
+									<input type="hidden" name="title-4-2" value="Длина изделия (мм)">
+									<h3 class="quiz-item__title fade-in">
+										Длина изделия (мм)
+									</h3>
+									<div class="quiz-options flex">
+										<div class="quiz-option">
+											<input type="range" min="0" max="4500" value="4" class="quiz-option__input" name="quiz4"
+												id="quiz4-2">
+											<div class="quiz-option__range flex" id="rangeLenght"></div>
+										</div>
+									</div>
+									<div class="quiz-options flex" data-quiz-single-answer>
+										<div class="quiz-option">
+											<input type="radio" class="quiz-option__input" name="quiz4" id="quiz4-3"
+												value="Пользователь пропустил вопрос с указанием ширины и длины изделия">
+											<div class="quiz-option__wrapper">
+												<div class="quiz-option__wrap flex">
+													<div class="quiz-option__radiobtn">
+													</div>
+													<p class="quiz-option__label">
+														Пропустить вопрос
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
 
+								</div>
+								<div class="quiz-item" style="display:none;">
+									<input type="hidden" name="title-5" value="Доставка">
+									<h3 class="quiz-item__title fade-in">
+										Доставка
+									</h3>
+									<div class="quiz-options flex" data-quiz-single-answer>
+										<div class="quiz-option">
+											<input type="radio" class="quiz-option__input" name="quiz5" id="quiz5-1" value="Требуется">
+											<div class="quiz-option__wrapper">
+												<div class="quiz-option__img">
+													<p>Доставка</p>
+												</div>
+												<div class="quiz-option__wrap flex">
+													<div class="quiz-option__radiobtn">
+													</div>
+													<p class="quiz-option__label">
+														Требуется
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="quiz-option">
+											<input type="radio" class="quiz-option__input" name="quiz5" id="quiz5-2" value="Заберу сам">
+											<div class="quiz-option__wrapper">
+												<div class="quiz-option__img">
+													<p>Самовывоз</p>
+												</div>
+												<div class="quiz-option__wrap flex">
+													<div class="quiz-option__radiobtn">
+													</div>
+													<p class="quiz-option__label">
+														Заберу сам
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="quiz-item quiz-item--final flex" style="display:none;">
+									<input type="hidden" name="title-6" value="Куда отправить подбор и расчет мебельного щита?">
+									<h3 class="quiz-item__title fade-in">
+										Куда отправить подбор и расчет мебельного щита?
+									</h3>
+									<div class="quiz-options flex">
+										<div class="quiz-option active">
+											<input type="radio" class="quiz-option__input" name="quiz6" id="quiz6-1" value="WhatsApp">
+											<div class="quiz-option__icon">
+												<svg viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M24.5009 0.0869141C11.2994 0.0869141 0.587891 10.7984 0.587891 24C0.587891 29.2861 2.29895 34.155 5.19244 38.1196L2.14592 47.134L11.6472 44.1709C15.3614 46.5358 19.7712 47.913 24.5009 47.913C37.7025 47.913 48.414 37.2015 48.414 24C48.414 10.7984 37.7025 0.0869141 24.5009 0.0869141ZM35.4489 36.8259C31.1087 38.5648 25.9338 36.8816 20.272 32.5831C14.6102 28.2846 10.882 22.2333 10.6316 17.74C10.3812 13.2467 14.0398 10.9792 16.0291 10.9932C18.0184 11.0071 20.2024 17.3644 20.2303 18.3382C20.2581 19.3259 17.7958 21.0786 17.6984 21.9133C17.6011 22.748 21.051 26.8656 22.5117 27.9785C23.9584 29.0775 26.9493 31.192 28.4934 30.9972C30.0236 30.7885 31.0391 27.7142 32.0129 27.5194C32.9867 27.3247 38.3007 29.9678 38.8293 30.6494C39.3579 31.345 39.3023 35.2957 35.4489 36.8259Z" />
+												</svg>
+											</div>
+											<p class="quiz-option__label">WhatsApp</p>
+										</div>
+										<div class="quiz-option">
+											<input type="radio" class="quiz-option__input" name="quiz6" id="quiz6-2" value="E-mail">
+											<div class="quiz-option__icon">
+												<svg viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M45.5934 9.13721L31.6426 22.9982L45.5934 36.8592C45.8456 36.3321 45.9986 35.7494 45.9986 35.1271V10.8693C45.9986 10.247 45.8456 9.66432 45.5934 9.13721Z" />
+													<path
+														d="M41.9567 6.82812H4.04264C3.4203 6.82812 2.83766 6.98113 2.31055 7.23332L20.1412 24.9741C21.7178 26.5507 24.2816 26.5507 25.8581 24.9741L43.6888 7.23332C43.1617 6.98113 42.5791 6.82812 41.9567 6.82812Z" />
+													<path
+														d="M0.405195 9.13721C0.153004 9.66432 0 10.247 0 10.8693V35.1271C0 35.7495 0.153004 36.3322 0.405195 36.8592L14.356 22.9982L0.405195 9.13721Z" />
+													<path
+														d="M29.738 24.9048L27.7638 26.8789C25.1369 29.5059 20.8624 29.5059 18.2354 26.8789L16.2614 24.9048L2.31055 38.7658C2.83766 39.018 3.4203 39.171 4.04264 39.171H41.9567C42.5791 39.171 43.1617 39.018 43.6888 38.7658L29.738 24.9048Z" />
+												</svg>
+											</div>
+											<p class="quiz-option__label">E-mail</p>
+										</div>
+										<div class="quiz-option">
+											<input type="radio" class="quiz-option__input" name="quiz6" id="quiz6-3" value="Телефон">
+											<div class="quiz-option__icon">
+												<svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M28.5786 21.2394C27.3887 20.0051 25.8418 20.0051 24.6024 21.2394C23.6703 22.1676 22.7481 23.0859 21.816 24.014C21.5582 24.2708 21.35 24.3201 21.0426 24.172C20.4774 23.8166 19.8031 23.5598 19.2379 23.1945C16.5508 21.4961 14.2801 19.3337 12.2672 16.875C11.2855 15.6407 10.4129 14.3571 9.78823 12.8661C9.68907 12.56 9.68907 12.402 9.94688 12.1453C10.9285 11.2665 11.8011 10.3482 12.7332 9.41998C14.0222 8.13634 14.0222 6.64533 12.7332 5.36169C11.9598 4.5915 11.2359 3.87068 10.5121 3.14987C9.73865 2.37968 9.0148 1.60949 8.24137 0.888677C7.05148 -0.296226 5.50462 -0.296226 4.26516 0.888677C3.33308 1.81685 2.41091 2.73515 1.47883 3.66333C0.596329 4.54213 0.140205 5.56905 0.0311314 6.74407C-0.127521 8.64979 0.338519 10.4963 1.01279 12.2934C2.41091 16.0456 4.52296 19.2843 7.05148 22.3157C10.5121 26.4332 14.637 29.6719 19.4462 31.9825C21.6177 33.0094 23.8388 33.829 26.2087 33.987C27.9142 34.0857 29.3619 33.6315 30.5419 32.338C31.3153 31.4098 32.2474 30.6396 33.0704 29.7707C34.3099 28.487 34.3099 26.9467 33.0704 25.7124C31.5731 24.2214 30.0758 22.7304 28.5786 21.2394Z" />
+												</svg>
+											</div>
+											<p class="quiz-option__label">Телефон</p>
+										</div>
+									</div>
+
+									<div class="quiz-item__srcsht">
+										<img src="media/img/screenshot.png" alt="">
+									</div>
+
+									<div class="quiz-item__bottom flex">
+										<div class="quiz-item__input-wrap">
+											<input type="tel" class="quiz-item__input input" placeholder="Ваш номер телефона WhatsApp">
+											<div class="quiz-item__wa">
+												<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path
+														d="M10.0008 0.434814C4.72014 0.434814 0.435547 4.71941 0.435547 10C0.435547 12.1145 1.11997 14.062 2.27737 15.6479L1.05876 19.2536L4.85925 18.0684C6.34495 19.0144 8.10887 19.5652 10.0008 19.5652C15.2814 19.5652 19.566 15.2807 19.566 10C19.566 4.71941 15.2814 0.434814 10.0008 0.434814ZM14.38 15.1304C12.6439 15.826 10.5739 15.1527 8.30918 13.4333C6.04447 11.7139 4.55321 9.29335 4.45305 7.49605C4.35289 5.69874 5.81633 4.79175 6.61204 4.79731C7.40775 4.80287 8.28136 7.34581 8.29249 7.73532C8.30362 8.13039 7.31872 8.83151 7.27977 9.16537C7.24082 9.49923 8.62079 11.1463 9.20505 11.5915C9.78375 12.031 10.9801 12.8768 11.5977 12.7989C12.2098 12.7155 12.616 11.4857 13.0055 11.4078C13.3951 11.3299 15.5207 12.3872 15.7321 12.6598C15.9436 12.938 15.9213 14.5183 14.38 15.1304Z" />
+												</svg>
+											</div>
+										</div>
+										<button class="quiz-item__btn main-btn main-btn--green">
+											<span class="btn-blick"></span>
+											<span class="main-btn__text">
+												Получить расчет
+												<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M1.5 14.5L14.5 1.5M14.5 1.5H4.75M14.5 1.5V11.25" stroke-width="1.6"
+														stroke-linecap="round" stroke-linejoin="round" />
+												</svg>
+											</span>
+										</button>
+										<div class="quiz-item__agree agree">
+											<div class="agree__checkbox"></div>
+											<p class="agree__text">
+												Нажимая кнопку вы соглашаетесь с условиями <span class="agree__link conf">Политики
+													конфиденциальности</span>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="quiz__bottom flex">
+								<div class="quiz__bottom-descr">
+									<b>Выберите вариант ответа</b>
+									и&nbsp;нажмите кнопку “Далее”
+								</div>
+								<div class="quiz__btns flex">
+									<button class="btn quiz-btn main-btn main-btn--white quiz-btn--prev" style="display:none;">
+										<span>Назад</span>
+									</button>
+									<button class="quiz__btn main-btn main-btn--green quiz-btn--next" disabled="">
+										<span class="btn-blick"></span>
+										<span>Далее</span>
+										<span class="quiz-btn__hint">Ответьте на вопрос выше</span>
+									</button>
+								</div>
+							</div>
+						</form>
+						<div class="quiz__right">
+							<div class="quiz__right-plate quiz-plate">
+								<div class="quiz-plate__row flex">
+									<div class="quiz-plate__icon">
+										<img src="media/svg/quotes.svg" alt="">
+									</div>
+									<div class="quiz-plate__head">
+										<p class="quiz-plate__name">Валерия Сергеевна</p>
+										<p class="quiz-plate__job">Менеджер отдела</p>
+									</div>
+								</div>
+								<p class="quiz-plate__text">
+									Пояснение от менеджера по этому вопросу, Пояснение от менеджера по этому вопросу
+								</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
