@@ -760,7 +760,7 @@
 		<!-- квиз -->
 		<section class="quiz" id="quiz">
 			<div class="container">
-				<h2 class="quiz__title section-title">Пройдите небольшой тест, и мы подготовим
+				<h2 class="quiz__title section-title">Пройдите небольшой тест, и&nbsp;мы&nbsp;подготовим
 					для&nbsp;вас лучшее предложение под вашу задачу
 				</h2>
 				<p class="quiz__subtitle">Поможем подобрать&nbsp;то, что действительно вам нужно на&nbsp;100%</p>
@@ -957,7 +957,7 @@
 									</h3>
 									<div class="quiz-options flex">
 										<div class="quiz-option">
-											<input type="range" min="0" max="1000" value="5" class="quiz-option__input" name="quiz4"
+											<input type="range" min="0" max="1000" value="0" class="quiz-option__input" name="quiz4"
 												id="quiz4-1">
 											<div class="quiz-option__range flex"></div>
 										</div>
@@ -968,7 +968,7 @@
 									</h3>
 									<div class="quiz-options flex">
 										<div class="quiz-option">
-											<input type="range" min="0" max="4500" value="4" class="quiz-option__input" name="quiz4"
+											<input type="range" min="0" max="4500" value="0" class="quiz-option__input" name="quiz4"
 												id="quiz4-2">
 											<div class="quiz-option__range flex" id="rangeLenght"></div>
 										</div>
@@ -1034,7 +1034,7 @@
 										Куда отправить подбор и расчет мебельного щита?
 									</h3>
 									<div class="quiz-options flex">
-										<div class="quiz-option active">
+										<div class="quiz-option active" data-send="WhatsApp">
 											<input type="radio" class="quiz-option__input" name="quiz6" id="quiz6-1" value="WhatsApp">
 											<div class="quiz-option__icon">
 												<svg viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1044,7 +1044,7 @@
 											</div>
 											<p class="quiz-option__label">WhatsApp</p>
 										</div>
-										<div class="quiz-option">
+										<div class="quiz-option" data-send="email">
 											<input type="radio" class="quiz-option__input" name="quiz6" id="quiz6-2" value="E-mail">
 											<div class="quiz-option__icon">
 												<svg viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1060,7 +1060,7 @@
 											</div>
 											<p class="quiz-option__label">E-mail</p>
 										</div>
-										<div class="quiz-option">
+										<div class="quiz-option" data-send="phone">
 											<input type="radio" class="quiz-option__input" name="quiz6" id="quiz6-3" value="Телефон">
 											<div class="quiz-option__icon">
 												<svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1072,13 +1072,14 @@
 										</div>
 									</div>
 
-									<div class="quiz-item__srcsht">
+									<div class="quiz-item__srcsht desktop">
 										<img src="media/img/screenshot.png" alt="">
 									</div>
 
 									<div class="quiz-item__bottom flex">
-										<div class="quiz-item__input-wrap">
-											<input type="tel" class="quiz-item__input input" placeholder="Ваш номер телефона WhatsApp">
+										<div class="quiz-item__input-wrap active" data-input="WhatsApp">
+											<input type="tel" class="quiz-item__input input" name="phone"
+												placeholder="Ваш номер телефона WhatsApp">
 											<div class="quiz-item__wa">
 												<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 													<path
@@ -1086,6 +1087,13 @@
 												</svg>
 											</div>
 										</div>
+										<div class="quiz-item__input-wrap" data-input="email">
+											<input type="email" class="quiz-item__input input" name="email" placeholder="Ваша почта">
+										</div>
+										<div class="quiz-item__input-wrap" data-input="phone">
+											<input type="tel" name="phone" class="quiz-item__input input" placeholder="Ваш номер телефона">
+										</div>
+										<input type="hidden" name="quiz6-data">
 										<button class="quiz-item__btn main-btn main-btn--green">
 											<span class="btn-blick"></span>
 											<span class="main-btn__text">
@@ -1123,7 +1131,7 @@
 								</div>
 							</div>
 						</form>
-						<div class="quiz__right">
+						<div class="quiz__right desktop">
 							<div class="quiz__right-plate quiz-plate">
 								<div class="quiz-plate__row flex">
 									<div class="quiz-plate__icon">

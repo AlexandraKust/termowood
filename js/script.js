@@ -152,6 +152,21 @@ document.querySelectorAll('.catalog__tab').forEach(function (tabsBtn) {
 	});
 });
 
+// tabs in quiz
+document.querySelectorAll('.quiz-item--final .quiz-option').forEach(function (inputBtn) {
+	inputBtn.addEventListener('click', function (e) {
+		const path = e.currentTarget.dataset.send;
+		document.querySelectorAll('.quiz-item--final .quiz-option').forEach(function (btn) {
+			btn.classList.remove('active')
+		});
+		e.currentTarget.classList.add('active');
+		document.querySelectorAll('.quiz-item__input-wrap').forEach(function (inputBtn) {
+			inputBtn.classList.remove('active')
+		});
+		document.querySelector(`[data-input="${path}"]`).classList.add('active');
+	});
+});
+
 // каталог
 let catalogItems = document.querySelectorAll('.catalog-item');
 catalogItems.forEach(function (catalog) {
@@ -178,6 +193,9 @@ $('[data-form-validate-js]').each(function () {
 			phone: {
 				required: true,
 				checkMaskPhone: true,
+			},
+			email: {
+				required: true
 			}
 		},
 		errorPlacement: function (error, element) { },
@@ -354,7 +372,7 @@ quizSingle.forEach(function (item) {
 function progress(num) {
 	const percent = parseInt((100 / maxNumber) * (num + 1));
 	$('.js-quiz').text(num + 1);
-	$('.quiz__progress-inner').css('width', (percent === 100 ? 98.9 : percent) + '%');
+	$('.quiz__progress-inner').css('width', (percent === 100 ? 98.5 : percent) + '%');
 }
 progress(0);
 
@@ -403,8 +421,7 @@ function btnClick() {
 		if (number === maxNumber - 1) {
 			$(".quiz__bottom").hide();
 			$(".quiz__right").hide();
-			$(".quiz__progress").hide();
-			$(".quiz__progress-text").text('<b>Тест пройден на 100%</b>');
+			$(".quiz__progress-text").html('<b>Тест пройден на 100%</b>');
 
 			// $('.js-quiz').text(number);
 			setTimeout(function () {
@@ -434,7 +451,7 @@ var quizFinalStep = function () {
 	}, 1000)
 }
 
-$('input[name^="quiz"]').not('input[name^="quiz4"]').on('change', function () {
+$('input[name^="quiz"]').not('input[name^="quiz4"], input[name^="quiz6"]').on('change', function () {
 	setTimeout(function () {
 		btnNext.click();
 	}, 500);
@@ -449,14 +466,20 @@ function inputValid(item) {
 	}
 }
 
-let quiz4Inputs = document.querySelectorAll('input[name^="quiz4"]');
+let quiz4Inputs = document.querySelectorAll('input[name="quiz4"]');
 if (quiz4Inputs) {
-	quiz4Inputs.forEach(function (input) {
-		input.oninput = function () {
-			inputValid(input)
+	inputWidth = document.getElementById('quiz4-1');
+	inputLenght = document.getElementById('quiz4-2');
+	inputSkip = document.getElementById('quiz4-3');
+	if (inputWidth.value != 0 && inputLenght.value != 0 || inputSkip.getAttribute('checked') == 'checked') {
+		btnNext.prop('disabled', false);
+	} else {
+		btnNext.prop('disabled', true);
+	}
 
-			let quiz4InputsChecked = document.querySelectorAll('input[name^="quiz4"].checked');
-			if (quiz4Inputs.length == quiz4InputsChecked.length) {
+	quiz4Inputs.forEach(function (input) {
+		input.onchange = function () {
+			if (inputWidth.value != 0 && inputLenght.value != 0 || inputSkip.getAttribute('checked') == 'checked') {
 				btnNext.prop('disabled', false);
 			} else {
 				btnNext.prop('disabled', true);
@@ -673,7 +696,7 @@ valuesOfWidth.forEach(function (item) {
 
 sliderWidth.max = valuesOfWidth.length - 1;
 sliderWidth.oninput = function () {
-	console.log(valuesOfWidth[this.value]);
+	// console.log(valuesOfWidth[this.value]);
 };
 sliderWidth.oninput();
 
@@ -694,7 +717,7 @@ valuesOfLenght.forEach(function (item) {
 
 sliderLenght.max = valuesOfLenght.length - 1;
 sliderLenght.oninput = function () {
-	console.log(valuesOfLenght[this.value]);
+	// console.log(valuesOfLenght[this.value]);
 };
 sliderLenght.oninput();
 

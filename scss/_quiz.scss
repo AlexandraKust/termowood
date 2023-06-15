@@ -1,5 +1,5 @@
 .quiz {
-	padding: 8.7rem 0 8rem;
+	padding: 8.1rem 0 7.7rem;
 
 	.container {
 		margin-left: 0;
@@ -15,7 +15,7 @@
 	}
 
 	&__subtitle {
-		margin-bottom: 6rem;
+		margin-bottom: 6.4rem;
 		margin-left: 27rem;
 		font-size: 3.2rem;
 		line-height: 4rem;
@@ -47,10 +47,6 @@
 		min-height: 76rem;
 		display: flex;
 		flex-direction: column;
-	}
-
-	&__items {
-		// margin-bottom: 3rem;
 	}
 
 	&__right {
@@ -111,6 +107,7 @@
 
 	&__progress {
 		position: relative;
+		margin-top: 0.4rem;
 		margin-bottom: 3.2rem;
 
 		&-bar {
@@ -124,12 +121,10 @@
 
 		&-inner {
 			position: absolute;
-			left: 0.8rem;
-			top: 0.8rem;
-			bottom: 0.8rem;
+			inset: 0.8rem;
 			border-radius: 3.6rem;
 			animation: loadingBg 10s infinite linear;
-			background: $accent-color-2 url(../media/svg/load.svg) 0 0 / 1.05vw 100%;
+			background: $accent-color-2 url(../media/svg/load.svg) 0 0 / auto 100%;
 		}
 
 		&-text {
@@ -184,6 +179,11 @@
 	&__input-wrap {
 		position: relative;
 		flex: 0 0 calc(50% - 2rem);
+		display: none;
+
+		&.active {
+			display: block;
+		}
 	}
 
 	&__input {
@@ -248,7 +248,7 @@
 .quiz-item--final {
 	flex: 0 0 100%;
 	flex-direction: column;
-	// opacity: 0;
+	opacity: 0;
 	transition: opacity 0.5s;
 
 	&.visible {
@@ -306,7 +306,6 @@
 	flex: 0 0 32rem;
 
 	&__wrap {
-		align-items: center;
 		justify-content: center;
 		gap: 1.2rem;
 	}
@@ -316,6 +315,7 @@
 		flex: 0 0 1.6rem;
 		width: 1.6rem;
 		height: 1.6rem;
+		margin-top: 0.6rem;
 		border-radius: 50%;
 		background: transparent;
 		border: 0.1rem solid #a8a4a4;
@@ -478,7 +478,6 @@
 		position: absolute;
 		margin-left: -0.5rem;
 		width: 112.2%;
-
 	}
 
 	#rangeLenght &__number:last-child {
@@ -619,5 +618,254 @@
 		font-size: 1.6rem;
 		line-height: 2rem;
 		color: $main-color;
+	}
+}
+
+
+@media (max-width: 768px) {
+	.quiz {
+		padding: 2.7rem 0 3rem;
+
+		.container {
+			margin: 0 auto;
+		}
+
+		&__title {
+			margin-left: 0;
+			margin-bottom: 1.6rem;
+			font-size: 2.8rem;
+			line-height: 3.5rem;
+		}
+
+		&__subtitle {
+			margin-bottom: 3.4rem;
+			margin-left: 0;
+			font-size: 2.3rem;
+			line-height: 2.9rem;
+		}
+
+		&__inner {
+			margin-left: -2.2rem;
+			margin-right: -0.7rem;
+		}
+
+		&__body {
+			padding: 2.2rem;
+			gap: 0;
+		}
+
+		&__form {
+			flex-basis: 100%;
+			min-height: auto;
+		}
+
+		&__bottom {
+			flex-direction: column;
+			justify-content: start;
+			margin-top: 0;
+			gap: 1rem;
+
+			&-descr {
+				flex-basis: auto;
+				font-size: 0.9rem;
+				line-height: 1.1rem;
+				text-align: center;
+			}
+		}
+
+		&__btns {
+			width: 100%;
+		}
+
+		.quiz-btn__hint {
+			width: fit-content;
+			white-space: nowrap;
+			font-size: 1rem;
+		}
+
+		&__progress {
+			margin-top: 0;
+			margin-bottom: 2.2rem;
+
+			&-bar {
+				height: 2rem;
+				border-radius: 50rem;
+			}
+
+			&-inner {
+				inset: 0.4rem;
+				border-radius: 1rem;
+			}
+
+			&-text {
+				font-size: 0.8rem;
+				letter-spacing: 0.02em;
+			}
+		}
+	}
+
+	.quiz-btn--next {
+		flex: 1 1 auto;
+		padding: 1.8rem;
+	}
+
+	.quiz-btn--prev {
+		flex: 1 1 auto;
+		padding: 1.8rem;
+	}
+
+	.quiz-item {
+		&__title {
+			margin-bottom: 2.2rem;
+			font-size: 1.9rem;
+			line-height: 2.3rem;
+		}
+
+		&__bottom {
+			width: 100%;
+			flex-direction: column;
+		}
+
+		&__input-wrap {
+			flex-basis: auto;
+		}
+
+		&__wa {
+			display: none;
+			right: 1.5rem;
+			width: 3rem;
+			height: 3rem;
+
+			svg {
+				width: 1.6rem;
+				height: 1.6rem;
+			}
+		}
+	}
+
+	.quiz-item--final {
+		.quiz-item__title {
+			margin: 0 0 3rem;
+		}
+
+		.quiz-options {
+			margin-bottom: 4rem;
+			gap: 1.7rem;
+		}
+	}
+
+	.quiz-item--range {
+		.quiz-option {
+			max-width: 100%;
+			margin-bottom: 3.7rem;
+		}
+	}
+
+	.quiz-options {
+		margin-bottom: 2.2rem;
+		gap: 2.1rem;
+	}
+
+	.quiz-option {
+		flex-basis: 12rem;
+		max-width: 12rem;
+
+		&__wrap {
+			gap: 0.8rem;
+		}
+
+		&__radiobtn {
+			flex-basis: 1.2rem;
+			width: 1.2rem;
+			height: 1.2rem;
+			margin-top: 0.2rem;
+
+			&::after {
+				width: 0.6rem;
+				height: 0.6rem;
+			}
+		}
+
+		&__img {
+			height: 8rem;
+			margin-bottom: 0.8rem;
+
+			svg {
+				width: 1.1rem;
+				height: 2rem;
+			}
+
+			p {
+				font-size: 1.6rem;
+			}
+		}
+
+		&__label {
+			font-size: 1.3rem;
+			line-height: 123%;
+		}
+
+		&__input[type="range"] {
+			width: 105%;
+			margin-left: -0.5rem;
+			margin-bottom: 1.8rem;
+
+			&::-webkit-slider-thumb {
+				transform: translateX(0);
+			}
+
+			&::-moz-range-thumb {
+				transform: translateX(0);
+			}
+		}
+
+		&__range {
+			margin-left: -0.5rem;
+		}
+
+		#rangeLenght {
+			margin-left: -0.2rem;
+		}
+
+		#rangeLenght &__number:last-child {
+			&::after {
+				left: 55%;
+				width: 1rem;
+			}
+		}
+
+		#rangeLenght &__number:first-child {
+			&::after {
+				content: '';
+				position: absolute;
+				z-index: 3;
+				top: -3rem;
+				left: -0.9rem;
+				width: 1rem;
+				height: 1.6rem;
+				background-color: $main-color;
+			}
+		}
+
+		&__number {
+			font-size: 1rem;
+			line-height: 1rem;
+
+			&::before {
+				top: -1.8rem;
+				height: 1rem;
+			}
+
+			&:last-child::after {
+				left: 46.5%;
+				width: 0.9rem;
+			}
+		}
+
+		&__icon {
+			width: 5rem;
+			height: 5rem;
+			margin: 0 auto 0.8rem;
+		}
 	}
 }
