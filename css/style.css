@@ -2268,9 +2268,9 @@ button {
 .catalog-item__body {
   max-height: 0;
   overflow: hidden;
-  -webkit-transition: max-height 0.4s linear;
-  -o-transition: max-height 0.4s linear;
-  transition: max-height 0.4s linear;
+  -webkit-transition: max-height 0.4s linear, padding 0.4s linear;
+  -o-transition: max-height 0.4s linear, padding 0.4s linear;
+  transition: max-height 0.4s linear, padding 0.4s linear;
   border-radius: 0.2rem;
   background-color: #fff;
 }
@@ -4913,9 +4913,9 @@ ul .delivery__descr {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: color 0.3s ease-in-out;
-  -o-transition: color 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out;
+  -webkit-transition: color 0.3s ease-in-out, margin-bottom 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out, margin-bottom 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, margin-bottom 0.3s ease-in-out;
 }
 .faq__question::after {
   content: "+";

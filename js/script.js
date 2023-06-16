@@ -178,7 +178,7 @@ catalogItems.forEach(function (catalog) {
 		if (bodyCatalog.style.maxHeight) {
 			bodyCatalog.style.maxHeight = null;
 		} else {
-			bodyCatalog.style.maxHeight = bodyCatalog.scrollHeight / 10 + "rem";
+			bodyCatalog.style.maxHeight = bodyCatalog.scrollHeight / 5 + "rem";
 		}
 	})
 })
@@ -671,7 +671,7 @@ faqItems.forEach(function (faq) {
 		if (answer.style.maxHeight) {
 			answer.style.maxHeight = null;
 		} else {
-			answer.style.maxHeight = answer.scrollHeight / 10 + "rem";
+			answer.style.maxHeight = answer.scrollHeight / 5 + "rem";
 		}
 	})
 })
@@ -760,15 +760,15 @@ if (sideMenu) {
 	let sideClose = sideMenu.querySelector('.sidemenu__close');
 	let sideBody = sideMenu.querySelector('.sidemenu__body');
 	let sideTop = sideMenu.querySelector('.sidemenu__top');
-	sideBody.style.maxHeight = sideBody.scrollHeight / 10 + "rem";
+	sideBody.style.maxHeight = sideBody.scrollHeight + "rem";
 
 	window.addEventListener('resize', function () {
-		sideBody.style.maxHeight = sideBody.scrollHeight / 10 + "rem";
+		sideBody.style.maxHeight = sideBody.scrollHeight + "rem";
 	})
 
 	sideClose.addEventListener('click', function () {
 		if (sideBody.style.maxHeight == null && !sideTop.classList.contains('active')) {
-			sideBody.style.maxHeight = sideBody.scrollHeight / 10 + "rem";
+			sideBody.style.maxHeight = sideBody.scrollHeight + "rem";
 		} else {
 			sideBody.style.maxHeight = null;
 			sideMenu.classList.add('hidden');
@@ -793,7 +793,7 @@ if (sideMenu) {
 		if (sideBody.style.maxHeight) {
 			sideBody.style.maxHeight = null;
 		} else {
-			sideBody.style.maxHeight = sideBody.scrollHeight / 10 + "rem";
+			sideBody.style.maxHeight = sideBody.scrollHeight + "rem";
 		}
 	})
 }
