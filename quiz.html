@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>TermoWood</title>
+	<title>Квиз</title>
 	<link rel="icon" type="image/svg+xml" href="media/favicon.svg">
 	<link rel="icon" type="image/png" href="media/favicon.png">
 	<link rel="stylesheet" href="libs/custom-select.css">
@@ -66,10 +66,10 @@
 	</header>
 	<nav class="nav mobile">
 		<ul class="nav__list">
-			<li class="nav__item"><a href="#catalog" class="nav__link">Каталог</a></li>
-			<li class="nav__item"><a href="#about" class="nav__link">о нас</a></li>
-			<li class="nav__item"><a href="#quiz" class="nav__link">расчет</a></li>
-			<li class="nav__item"><a href="#warranty" class="nav__link">качество</a></li>
+			<li class="nav__item"><a href="index.html#catalog" class="nav__link">Каталог</a></li>
+			<li class="nav__item"><a href="index.html#about" class="nav__link">о нас</a></li>
+			<li class="nav__item"><a href="index.html#quiz" class="nav__link">расчет</a></li>
+			<li class="nav__item"><a href="index.html#warranty" class="nav__link">качество</a></li>
 		</ul>
 		<div class="header__question">
 			<div class="flex">
@@ -94,26 +94,49 @@
 		</div>
 	</nav>
 
-	<section class="hero">
+	<section class="hero hero--quiz">
 		<div class="container">
-			<div class="hero__undertitle flex">
-				<div class="hero__icon flex">
-					<img loading="lazy" src="media/svg/check.svg" alt="">
+			<div class="hero__row flex">
+				<div class="hero__content">
+					<h1 class="hero__title animation">
+						Подберите мебельный щит
+						<b>напрямую от&nbsp;производителя</b>
+						с&nbsp;гарантией лучшей цены
+					</h1>
+					<ul class="hero__list flex">
+						<li class="hero__item">
+							<b>Дешевле в&nbsp;1,5-2 раза</b> <br>
+							чем у&nbsp;дилеров и&nbsp;посредников
+						</li>
+						<li class="hero__item">
+							<b>Самовывоз</b> со&nbsp;склада в&nbsp;Москве
+							или <b>доставка</b> по&nbsp;РФ и&nbsp;СНГ.
+						</li>
+					</ul>
+					<a href="#quiz" class="hero__btn main-btn main-btn--darkgreen" data-anchor-btn-js>
+						<span class="btn-blick"></span>
+						<span class="main-btn__text">
+							Подобрать и&nbsp;зафиксировать <br>
+							лучшую цену
+						</span>
+					</a>
 				</div>
-				<p class="hero__text">Мебельные щиты из {дуба/ясеня} оптом от производителя “Термо Вуд”</p>
+				<div class="hero__wood flex">
+					<div class="hero__wood-item flex">
+						<p class="hero__wood-name">Дуб</p>
+						<div class="hero__wood-img">
+							<img src="media/img/дуб.jpg" alt="">
+						</div>
+					</div>
+					<div class="hero__wood-item flex">
+						<p class="hero__wood-name">Ясень</p>
+						<div class="hero__wood-img">
+							<img src="media/img/ясень.jpg" alt="">
+						</div>
+					</div>
+				</div>
+
 			</div>
-			<h1 class="hero__title animation">
-				На&nbsp;мебельные щиты даем<br>
-				в&nbsp;1,5&nbsp;&ndash;&nbsp;2&nbsp;раза более выгодные цены, чем у&nbsp;посредников
-			</h1>
-			<p class="hero__subtitle">
-				Европейское качество по российским ценам. <br>
-				Самовывоз со склада в Москве или доставка по РФ и СНГ.
-			</p>
-			<a href="#quiz" class="hero__btn main-btn main-btn--darkgreen" data-anchor-btn-js>
-				<span class="btn-blick"></span>
-				<span class="main-btn__text">Подобрать и рассчитать</span>
-			</a>
 		</div>
 		<div class="hero__decor">
 			<img loading="lazy" src="media/svg/wood.svg" alt="">
@@ -121,651 +144,15 @@
 	</section>
 
 	<main class="main">
-		<!-- каталог -->
-		<section class="catalog" id="catalog">
-			<div class="container">
-				<div class="catalog__row flex">
-					<div class="catalog__body">
-						<h2 class="catalog__title animation">
-							Выбирайте в&nbsp;нашем каталоге на&nbsp;сайте
-						</h2>
-						<div class="catalog__data flex">
-							<div class="catalog__choose flex">
-								<div class="catalog__text">Выберите дерево</div>
-								<ul class="catalog__tabs flex">
-									<li class="catalog__tab active" data-path="one">Дуб</li>
-									<li class="catalog__tab" data-path="two">Ясень</li>
-								</ul>
-							</div>
-							<div class="catalog__label flex">
-								<div class="catalog__icon">
-									<img loading="lazy" src="media/svg/box.svg" alt="">
-								</div>
-								<p class="catalog__label-text">
-									<b>Всегда в наличии </b>
-									на&nbsp;собственном складе
-								</p>
-							</div>
-						</div>
-						<div class="catalog__content">
-							<ul class="catalog__list active" data-target="one">
-								<li class="catalog__item catalog-item">
-									<div class="catalog-item__head flex">
-										<a href="media/img/catalog-1.jpg" class="catalog-item__img" data-fancybox="catalog-gallery">
-											<img loading="lazy" src="media/img/catalog-1.jpg" alt="">
-										</a>
-										<div class="catalog-item__title">
-											<p class="catalog-item__name">Цельноламельный дуб. Сорт Экстра, ступени</p>
-											<p class="catalog-item__descr">
-												Здесь можно дать пояснение общее, обучить и рассказать для чего. Здесь можно дать пояснение
-												общее, обучить и рассказать для чего
-											</p>
-										</div>
-									</div>
-									<ul class="catalog-item__body">
-										<li class="catalog-item__unit flex">
-											<div class="catalog-item__size">40x300x900мм</div>
-											<div class="catalog-item__price">190 000 р./м²</div>
-											<div class="catalog-item__buy">
-												<button class="catalog-item__btn callback-open">Заказать</button>
-											</div>
-										</li>
-										<li class="catalog-item__unit flex">
-											<div class="catalog-item__size">40x300x900мм</div>
-											<div class="catalog-item__price">190 000 р./м²</div>
-											<div class="catalog-item__buy">
-												<button class="catalog-item__btn callback-open">Заказать</button>
-											</div>
-										</li>
-										<li class="catalog-item__unit flex">
-											<div class="catalog-item__size">40x300x900мм</div>
-											<div class="catalog-item__price">190 000 р./м²</div>
-											<div class="catalog-item__buy">
-												<button class="catalog-item__btn callback-open">Заказать</button>
-											</div>
-										</li>
-										<li class="catalog-item__unit flex">
-											<div class="catalog-item__size">40x300x900мм</div>
-											<div class="catalog-item__price">190 000 р./м²</div>
-											<div class="catalog-item__buy">
-												<button class="catalog-item__btn callback-open">Заказать</button>
-											</div>
-										</li>
-									</ul>
-								</li>
-								<li class="catalog__item catalog-item">
-									<div class="catalog-item__head flex">
-										<a href="media/img/catalog-1.jpg" class="catalog-item__img" data-fancybox="catalog-gallery">
-											<img loading="lazy" src="media/img/catalog-1.jpg" alt="">
-										</a>
-										<div class="catalog-item__title">
-											<p class="catalog-item__name">Цельноламельный дуб. Сорт Экстра, подступенки</p>
-											<p class="catalog-item__descr">
-												Здесь можно дать пояснение общее, обучить и рассказать для чего. Здесь можно дать пояснение
-												общее, обучить и рассказать для чего
-											</p>
-										</div>
-									</div>
-									<ul class="catalog-item__body">
-										<li class="catalog-item__unit flex">
-											<div class="catalog-item__size">40x300x900мм</div>
-											<div class="catalog-item__price">190 000 р./м²</div>
-											<div class="catalog-item__buy">
-												<button class="catalog-item__btn callback-open">Заказать</button>
-											</div>
-										</li>
-										<li class="catalog-item__unit flex">
-											<div class="catalog-item__size">40x300x900мм</div>
-											<div class="catalog-item__price">190 000 р./м²</div>
-											<div class="catalog-item__buy">
-												<button class="catalog-item__btn callback-open">Заказать</button>
-											</div>
-										</li>
-										<li class="catalog-item__unit flex">
-											<div class="catalog-item__size">40x300x900мм</div>
-											<div class="catalog-item__price">190 000 р./м²</div>
-											<div class="catalog-item__buy">
-												<button class="catalog-item__btn callback-open">Заказать</button>
-											</div>
-										</li>
-										<li class="catalog-item__unit flex">
-											<div class="catalog-item__size">40x300x900мм</div>
-											<div class="catalog-item__price">190 000 р./м²</div>
-											<div class="catalog-item__buy">
-												<button class="catalog-item__btn callback-open">Заказать</button>
-											</div>
-										</li>
-									</ul>
-								</li>
-								<li class="catalog__item catalog-item">
-									<div class="catalog-item__head flex">
-										<a href="media/img/catalog-1.jpg" class="catalog-item__img" data-fancybox="catalog-gallery">
-											<img loading="lazy" src="media/img/catalog-1.jpg" alt="">
-										</a>
-										<div class="catalog-item__title">
-											<p class="catalog-item__name">Мебельный щит дуб. Сорт Экстра 40мм</p>
-											<p class="catalog-item__descr">
-												Здесь можно дать пояснение общее, обучить и рассказать для чего. Здесь можно дать пояснение
-												общее, обучить и рассказать для чего
-											</p>
-										</div>
-									</div>
-									<ul class="catalog-item__body">
-										<li class="catalog-item__unit flex">
-											<div class="catalog-item__size">40x300x900мм</div>
-											<div class="catalog-item__price">190 000 р./м²</div>
-											<div class="catalog-item__buy">
-												<button class="catalog-item__btn callback-open">Заказать</button>
-											</div>
-										</li>
-										<li class="catalog-item__unit flex">
-											<div class="catalog-item__size">40x300x900мм</div>
-											<div class="catalog-item__price">190 000 р./м²</div>
-											<div class="catalog-item__buy">
-												<button class="catalog-item__btn callback-open">Заказать</button>
-											</div>
-										</li>
-										<li class="catalog-item__unit flex">
-											<div class="catalog-item__size">40x300x900мм</div>
-											<div class="catalog-item__price">190 000 р./м²</div>
-											<div class="catalog-item__buy">
-												<button class="catalog-item__btn callback-open">Заказать</button>
-											</div>
-										</li>
-										<li class="catalog-item__unit flex">
-											<div class="catalog-item__size">40x300x900мм</div>
-											<div class="catalog-item__price">190 000 р./м²</div>
-											<div class="catalog-item__buy">
-												<button class="catalog-item__btn callback-open">Заказать</button>
-											</div>
-										</li>
-									</ul>
-								</li>
-								<li class="catalog__item catalog-item">
-									<div class="catalog-item__head flex">
-										<a href="media/img/catalog-1.jpg" class="catalog-item__img" data-fancybox="catalog-gallery">
-											<img loading="lazy" src="media/img/catalog-1.jpg" alt="">
-										</a>
-										<div class="catalog-item__title">
-											<p class="catalog-item__name">Мебельный щит дуб. Сорт Экстра 20мм</p>
-											<p class="catalog-item__descr">
-												Здесь можно дать пояснение общее, обучить и рассказать для чего. Здесь можно дать пояснение
-												общее, обучить и рассказать для чего
-											</p>
-										</div>
-									</div>
-									<ul class="catalog-item__body">
-										<li class="catalog-item__unit flex">
-											<div class="catalog-item__size">40x300x900мм</div>
-											<div class="catalog-item__price">190 000 р./м²</div>
-											<div class="catalog-item__buy">
-												<button class="catalog-item__btn callback-open">Заказать</button>
-											</div>
-										</li>
-										<li class="catalog-item__unit flex">
-											<div class="catalog-item__size">40x300x900мм</div>
-											<div class="catalog-item__price">190 000 р./м²</div>
-											<div class="catalog-item__buy">
-												<button class="catalog-item__btn callback-open">Заказать</button>
-											</div>
-										</li>
-										<li class="catalog-item__unit flex">
-											<div class="catalog-item__size">40x300x900мм</div>
-											<div class="catalog-item__price">190 000 р./м²</div>
-											<div class="catalog-item__buy">
-												<button class="catalog-item__btn callback-open">Заказать</button>
-											</div>
-										</li>
-										<li class="catalog-item__unit flex">
-											<div class="catalog-item__size">40x300x900мм</div>
-											<div class="catalog-item__price">190 000 р./м²</div>
-											<div class="catalog-item__buy">
-												<button class="catalog-item__btn callback-open">Заказать</button>
-											</div>
-										</li>
-									</ul>
-								</li>
-								<li class="catalog__item catalog-item">
-									<div class="catalog-item__head flex">
-										<a href="media/img/catalog-1.jpg" class="catalog-item__img" data-fancybox="catalog-gallery">
-											<img loading="lazy" src="media/img/catalog-1.jpg" alt="">
-										</a>
-										<div class="catalog-item__title">
-											<p class="catalog-item__name">Мебельный щит сорт Кантри</p>
-											<p class="catalog-item__descr">
-												Здесь можно дать пояснение общее, обучить и рассказать для чего. Здесь можно дать пояснение
-												общее, обучить и рассказать для чего
-											</p>
-										</div>
-									</div>
-									<ul class="catalog-item__body">
-										<li class="catalog-item__unit flex">
-											<div class="catalog-item__size">40x300x900мм</div>
-											<div class="catalog-item__price">190 000 р./м²</div>
-											<div class="catalog-item__buy">
-												<button class="catalog-item__btn callback-open">Заказать</button>
-											</div>
-										</li>
-										<li class="catalog-item__unit flex">
-											<div class="catalog-item__size">40x300x900мм</div>
-											<div class="catalog-item__price">190 000 р./м²</div>
-											<div class="catalog-item__buy">
-												<button class="catalog-item__btn callback-open">Заказать</button>
-											</div>
-										</li>
-										<li class="catalog-item__unit flex">
-											<div class="catalog-item__size">40x300x900мм</div>
-											<div class="catalog-item__price">190 000 р./м²</div>
-											<div class="catalog-item__buy">
-												<button class="catalog-item__btn callback-open">Заказать</button>
-											</div>
-										</li>
-										<li class="catalog-item__unit flex">
-											<div class="catalog-item__size">40x300x900мм</div>
-											<div class="catalog-item__price">190 000 р./м²</div>
-											<div class="catalog-item__buy">
-												<button class="catalog-item__btn callback-open">Заказать</button>
-											</div>
-										</li>
-									</ul>
-								</li>
-							</ul>
-							<ul class="catalog__list" data-target="two">
-								<li class="catalog__item catalog-item">
-									<div class="catalog-item__head flex">
-										<a href="media/img/catalog-1.jpg" class="catalog-item__img" data-fancybox="catalog-gallery">
-											<img loading="lazy" src="media/img/catalog-1.jpg" alt="">
-										</a>
-										<div class="catalog-item__title">
-											<p class="catalog-item__name">Мебельный щит сорт Кантри</p>
-											<p class="catalog-item__descr">
-												Здесь можно дать пояснение общее, обучить и рассказать для чего. Здесь можно дать пояснение
-												общее, обучить и рассказать для чего
-											</p>
-										</div>
-									</div>
-									<ul class="catalog-item__body">
-										<li class="catalog-item__unit flex">
-											<div class="catalog-item__size">40x300x900мм</div>
-											<div class="catalog-item__price">190 000 р./м²</div>
-											<div class="catalog-item__buy">
-												<button class="catalog-item__btn callback-open">Заказать</button>
-											</div>
-										</li>
-										<li class="catalog-item__unit flex">
-											<div class="catalog-item__size">40x300x900мм</div>
-											<div class="catalog-item__price">190 000 р./м²</div>
-											<div class="catalog-item__buy">
-												<button class="catalog-item__btn callback-open">Заказать</button>
-											</div>
-										</li>
-										<li class="catalog-item__unit flex">
-											<div class="catalog-item__size">40x300x900мм</div>
-											<div class="catalog-item__price">190 000 р./м²</div>
-											<div class="catalog-item__buy">
-												<button class="catalog-item__btn callback-open">Заказать</button>
-											</div>
-										</li>
-										<li class="catalog-item__unit flex">
-											<div class="catalog-item__size">40x300x900мм</div>
-											<div class="catalog-item__price">190 000 р./м²</div>
-											<div class="catalog-item__buy">
-												<button class="catalog-item__btn callback-open">Заказать</button>
-											</div>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="catalog__sidebar catalog-sidebar">
-						<div class="catalog-sidebar__body">
-							<p class="catalog-sidebar__title animation">
-								Получите наш
-								прайс-каталог
-							</p>
-							<form action="mailer/send.php" method="post" class="catalog-sidebar__form"
-								data-download-form-js="files/catalog.pdf">
-								<input type="hidden" name="formname" value="catalog">
-								<div class="catalog-sidebar__group">
-									<label class="label">Куда прислать?</label>
-									<div class="select-social">
-										<div class="catalog-sidebar__select select">
-											<select id="select-social" name="social">
-												<option value="WhatsApp">
-													WhatsApp
-												</option>
-												<option value="Telegram">
-													Telegram
-												</option>
-											</select>
-										</div>
-										<div class="select-social__img social">
-											<div class="social__item social__item-telegram">
-												<svg viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M5.20148 7.81348L4.98922 10.7108C5.29137 10.7108 5.42372 10.5843 5.58104 10.4311L6.99941 9.11012L9.93852 11.2071C10.4779 11.499 10.8575 11.3458 11.0023 10.723L12.9326 1.91417C13.1049 1.14057 12.6454 0.836486 12.121 1.02867L0.779073 5.25914C0.00496463 5.55107 0.0174502 5.97193 0.646725 6.16168L3.54589 7.03988L10.2806 2.93348C10.5978 2.72913 10.8849 2.84104 10.6477 3.04782L5.20148 7.81348Z" />
-												</svg>
-											</div>
-											<div class="social__item social__item-whatsapp active">
-												<svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M7.17844 0.376953C3.42917 0.376953 0.387085 3.41622 0.387085 7.16203C0.387085 8.66193 0.873029 10.0434 1.69479 11.1683L0.82957 13.7261L3.52794 12.8853C4.58279 13.5563 5.83519 13.9471 7.17844 13.9471C10.9277 13.9471 13.9698 10.9078 13.9698 7.16203C13.9698 3.41622 10.9277 0.376953 7.17844 0.376953ZM10.2877 10.8013C9.05506 11.2946 7.58537 10.817 5.97741 9.59739C4.36945 8.37774 3.31065 6.66075 3.23953 5.38583C3.16842 4.11092 4.20747 3.46754 4.77243 3.47148C5.33739 3.47543 5.95766 5.27926 5.96556 5.55556C5.97346 5.8358 5.27418 6.33314 5.24652 6.56996C5.21887 6.80679 6.19866 7.97513 6.61349 8.2909C7.02436 8.60272 7.87378 9.20268 8.31231 9.14742C8.7469 9.08822 9.0353 8.21591 9.31186 8.16065C9.58841 8.10539 11.0976 8.85534 11.2477 9.04875C11.3979 9.2461 11.3821 10.3671 10.2877 10.8013Z" />
-												</svg>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="catalog-sidebar__group">
-									<label class="label">Введите номер</label>
-									<input type="tel" name="phone" class="input" placeholder="+7(___) ___-__-__">
-								</div>
-								<button class="catalog-sidebar__btn main-btn main-btn--green">
-									<span class="btn-blick"></span>
-									<span class="main-btn__text">Получить каталог</span>
-								</button>
-								<div class="catalog-sidebar__agree agree">
-									<div class="agree__checkbox"></div>
-									<p class="agree__text">
-										Нажимая кнопку вы соглашаетесь с условиями <span class="agree__link conf">Политики
-											конфиденциальности</span>
-									</p>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- консультация -->
-		<section class="consultation">
-			<div class="container">
-				<h2 class="consultation__title section-title">
-					Не знаете какой мебельный щит вам нужен? Как правильно выбрать породу и сорт?
-				</h2>
-				<div class="consultation__name">
-					<span>Мария,</span>
-					менеджер заботы
-					о&nbsp;клиентах &laquo;Термо Вуд&raquo;
-				</div>
-				<div class="consultation__row flex">
-					<div class="consultation__content">
-						<p class="consultation__caption">
-							Получите ответы на эти и другие вопросы на консультации:
-						</p>
-						<ul class="consultation__list">
-							<li class="consultation__item">поможем определиться с выбором под ваши потребности</li>
-							<li class="consultation__item">расскажем, от&nbsp;чего зависит стоимость и&nbsp;почему у&nbsp;нас самые
-								низкие цены на&nbsp;рынке</li>
-							<li class="consultation__item">подготовим расчет</li>
-						</ul>
-					</div>
-					<div class="consultation__form">
-						<p class="consultation__heading">Оставьте номер, свяжемся как можно скорее</p>
-						<form action="mailer/send.php" method="post" class="consultation__form" data-form-validate-js>
-							<input type="hidden" name="formname" value="callback">
-							<label class="label">Введите номер</label>
-							<input type="tel" class="input" name="phone" placeholder="+7(___) ___-__-__">
-							<button class="consultation__btn main-btn main-btn--green">
-								<span class="btn-blick"></span>
-								<span class="main-btn__text">Получить консультацию</span>
-							</button>
-							<div class="consultation__agree agree">
-								<div class="agree__checkbox"></div>
-								<p class="agree__text">
-									Нажимая кнопку вы соглашаетесь <br class="mobile"> с условиями <span class="agree__link conf">Политики
-										конфиденциальности</span>
-								</p>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- сотрудничество -->
-		<section class="cooperation">
-			<div class="container">
-				<h2 class="cooperation__title section-title">
-					Работаем со столярными мастерскими, мебельными фабриками, производствами лестниц
-				</h2>
-				<div class="cooperation__row flex">
-					<p class="cooperation__caption">Оплату можно произвести любым удобным способом:</p>
-					<ul class="cooperation__pay flex">
-						<li class="cooperation__item flex">
-							<div class="cooperation__img">
-								<img loading="lazy" src="media/svg/pay.svg" alt="">
-							</div>
-							<p class="cooperation__text">
-								Безналичный расчет для юридических лиц через банк при выставлении счета.
-							</p>
-						</li>
-						<li class="cooperation__item flex">
-							<div class="cooperation__img">
-								<img loading="lazy" src="media/svg/visa&mc.svg" alt="">
-							</div>
-							<p class="cooperation__text">
-								Банковская карта (Visa/MasterCard).
-							</p>
-						</li>
-						<li class="cooperation__item flex">
-							<div class="cooperation__img">
-								<img loading="lazy" src="media/img/sbp.png" alt="">
-							</div>
-							<p class="cooperation__text">Система быстрых платежей</p>
-						</li>
-					</ul>
-				</div>
-				<div class="cooperation__bottom flex">
-					<p class="cooperation__descr">Действуют специальные предложения</p>
-					<button class="cooperation__btn main-btn main-btn--green legal-open">
-						<span class="btn-blick"></span>
-						<span class="main-btn__text">Получить прайс для юр. лиц</span>
-					</button>
-				</div>
-			</div>
-		</section>
-
-		<!-- о компании -->
-		<section class="about" id="about">
-			<div class="container">
-				<h2 class="about__title section-title">
-					Более 14&nbsp;лет занимаемся производством
-					и&nbsp;оптовой продажей пиломатериалов
-					и&nbsp;мебельных щитов из&nbsp;ценных пород дерева
-				</h2>
-				<div class="about__info">
-					<div class="about__img">
-						<picture>
-							<source srcset="media/img/team-mobile.jpg" media="(max-width: 780px)">
-							<img loading="lazy" src="media/img/team.jpg" alt="">
-						</picture>
-					</div>
-					<div class="about__descr">
-						<p class="about__name">
-							Термо Вуд — ваш надежный партнер.
-						</p>
-						<p class="about__text">
-							Полностью закроем потребность в качественных материалах для производства мебели, лестниц, столешниц и
-							других
-							изделий из дерева.
-						</p>
-					</div>
-				</div>
-				<div class="about__bottom flex">
-					<ul class="about__results flex">
-						<li class="about__item flex">
-							<p class="about__number num-anim">
-								<span data-max="207">207</span>м&sup3;
-							</p>
-							<p class="about__label">объем производства в&nbsp;месяц</p>
-						</li>
-						<li class="about__item flex">
-							<p class="about__number num-anim">
-								c <span data-max="2009">2009</span> г.
-							</p>
-							<p class="about__label">успешно работаем на&nbsp;рынке</p>
-						</li>
-						<li class="about__item flex">
-							<p class="about__number num-anim">
-								<span data-max="900">900</span>+
-							</p>
-							<p class="about__label">партнеров уже выбрали &laquo;Термо Вуд&raquo;</p>
-						</li>
-					</ul>
-					<div>
-						<div class="about__swiper swiper swiper-scroll">
-							<div class="swiper-wrapper about__wrapper">
-								<a class="swiper-slide about__slide" href="media/img/cert-1.jpg" data-fancybox="cert">
-									<img loading="lazy" src="media/img/cert-1.jpg" alt="">
-								</a>
-								<a class="swiper-slide about__slide" href="media/img/cert-1.jpg" data-fancybox="cert">
-									<img loading="lazy" src="media/img/cert-1.jpg" alt="">
-								</a>
-								<a class="swiper-slide about__slide" href="media/img/cert-1.jpg" data-fancybox="cert">
-									<img loading="lazy" src="media/img/cert-1.jpg" alt="">
-								</a>
-							</div>
-						</div>
-						<div class="about__arrows swiper__arrows flex">
-							<div class="slider-btn slider-btn--prev">
-								<svg viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M9 15L1 8L9 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-								</svg>
-							</div>
-							<div class="slider-btn slider-btn--next">
-								<svg viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M1 1L9 8L1 15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-								</svg>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- преимущества -->
-		<section class="benefits">
-			<div class="container">
-				<div class="benefits__row flex">
-					<div class="benefits__left">
-						<h2 class="benefits__title section-title">3 причины<br>
-							почему лучше заказать у нас, чем у посредников
-						</h2>
-					</div>
-					<ol class="benefits__list">
-						<li class="benefits__item">
-							<p class="benefits__name">Дешевле в 1,5—2 раза рыночной цены</p>
-							<p class="benefits__descr">
-								Наша компания является прямым производителем клеёных изделий из&nbsp;ценных пород дерева, поэтому
-								у&nbsp;нас есть возможность предложить самую низкую цену на&nbsp;рынке.
-							</p>
-							<p class="benefits__descr">
-								Мы&nbsp;гарантируем, что обратившись к&nbsp;нам, вы&nbsp;получите минимальную цену за&nbsp;изделие
-								заявленного качества.
-							</p>
-						</li>
-						<li class="benefits__item">
-							<p class="benefits__name">Больше внимания и профессионализма</p>
-							<p class="benefits__descr">
-								Мы&nbsp;с&nbsp;удовольствием проконсультируем вас по&nbsp;нашему ассортименту, породам, сортам, размерам
-								и&nbsp;ценам.
-							</p>
-							<p class="benefits__descr">
-								Мы&nbsp;знаем все о&nbsp;продукции, которую производим. С&nbsp;радостью отвечаем на&nbsp;все ваши
-								вопросы и&nbsp;помогаем сделать правильный выбор.
-							</p>
-						</li>
-						<li class="benefits__item">
-							<p class="benefits__name">Быстрее в 3 раза </p>
-							<p class="benefits__descr">
-								Все наши щиты в&nbsp;наличии на&nbsp;складе и&nbsp;готовы к&nbsp;отгрузке. Их&nbsp;не&nbsp;нужно ждать
-								и&nbsp;изготавливать под заказ.
-							</p>
-							<p class="benefits__descr">
-								Работая с&nbsp;нами вы&nbsp;получите мебельный щит уже на&nbsp;следующий день, после оформления заказа.
-							</p>
-						</li>
-					</ol>
-				</div>
-			</div>
-		</section>
-
-		<!-- команда -->
-		<section class="team">
-			<div class="container">
-				<div class="team__row flex">
-					<div class="team__text">
-						<h2 class="team__title section-title">Искренне любим то, чем занимаемся</h2>
-						<p class="team__subtitle">и благодарим за&nbsp;доверие наших клиентов.</p>
-						<div class="team__arrows swiper__arrows flex">
-							<div class="slider-btn slider-btn--prev">
-								<svg viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M9 15L1 8L9 1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-								</svg>
-							</div>
-							<div class="slider-btn slider-btn--next">
-								<svg viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M1 1L9 8L1 15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-								</svg>
-							</div>
-						</div>
-					</div>
-					<div class="team__pagination swiper-pagination"></div>
-					<div class="team__slider">
-						<div class="team__swiper swiper swiper-scroll">
-							<div class="team__wrapper swiper-wrapper">
-								<div class="team__slide swiper-slide">
-									<div class="team__img">
-										<img loading="lazy" src="media/img/team-1.jpg" alt="">
-									</div>
-									<div class="team__descr">
-										<p class="team__name">Безруков Валерий Сергеевич</p>
-										<p class="team__job">Руководитель компании</p>
-									</div>
-								</div>
-								<div class="team__slide swiper-slide">
-									<div class="team__img">
-										<img loading="lazy" src="media/img/team-2.jpg" alt="">
-									</div>
-									<div class="team__descr">
-										<p class="team__name">Стрелец Ксения Владимировна</p>
-										<p class="team__job">Менеджер отдела</p>
-									</div>
-								</div>
-								<div class="team__slide swiper-slide">
-									<div class="team__img">
-										<img loading="lazy" src="media/img/team-3.jpg" alt="">
-									</div>
-									<div class="team__descr">
-										<p class="team__name">Стрелец Ксения Владимировна</p>
-										<p class="team__job">Менеджер отдела</p>
-									</div>
-								</div>
-								<div class="team__slide swiper-slide">
-									<div class="team__img">
-										<img loading="lazy" src="media/img/team-1.jpg" alt="">
-									</div>
-									<div class="team__descr">
-										<p class="team__name">Безруков Валерий Сергеевич</p>
-										<p class="team__job">Руководитель компании</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
 		<!-- квиз -->
-		<section class="quiz">
-			<div class="container" id="quiz">
-				<h2 class="quiz__title section-title">Пройдите небольшой тест, и&nbsp;мы&nbsp;подготовим
-					для&nbsp;вас лучшее предложение под вашу задачу
+		<section class="quiz quiz--only" id="quiz">
+			<div class="container">
+				<h2 class="quiz__title section-title">
+					Подберите и&nbsp;узнайте стоимость мебельного щита для ваших проектов
 				</h2>
-				<p class="quiz__subtitle">Поможем подобрать&nbsp;то, что действительно вам нужно на&nbsp;100%</p>
+				<p class="quiz__subtitle">
+					Ответив на 5 вопросов за&nbsp;1&nbsp;минуту
+				</p>
 
 				<div class="quiz__inner animation">
 					<div class="quiz__body flex">
@@ -818,7 +205,7 @@
 										</div>
 										<div class="quiz-option">
 											<input type="radio" class="quiz-option__input" name="quiz1" id="quiz1-3" value="Еще не определился, 
-											рассматриваю оба варианта">
+													рассматриваю оба варианта">
 											<div class="quiz-option__wrapper">
 												<div class="quiz-option__img">
 													<svg viewBox="0 0 21 38" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -876,7 +263,7 @@
 										</div>
 										<div class="quiz-option">
 											<input type="radio" class="quiz-option__input" name="quiz2" id="quiz2-3" value="Еще не определился, 
-											рассматриваю оба варианта">
+													рассматриваю оба варианта">
 											<div class="quiz-option__wrapper">
 												<div class="quiz-option__img">
 													<svg viewBox="0 0 21 38" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1154,141 +541,51 @@
 			</div>
 		</section>
 
-		<!-- доставка -->
-		<section class="delivery">
+		<!-- сотрудничество -->
+		<section class="cooperation">
 			<div class="container">
-				<h2 class="delivery__title section-title">Отгружаем на следующий день после оформления заказа </h2>
-				<p class="delivery__subtitle">
-					Всегда в наличии на складе большой ассортимент продукции.<br>
-					Оплачиваете — по факту доставки
-				</p>
-				<ul class="delivery__row flex">
-					<li class="delivery__item">
-						<p class="delivery__name">Самовывоз</p>
-						<p class="delivery__descr">
-							Напрямую со склада на следующий день, после оформления заказа. Загрузка нашими силами.
-						</p>
-						<p class="delivery__descr">
-							Адрес: г. Химки, мкр. Сходня, ул. Некрасова, 2.
-						</p>
-						<a href="https://yandex.ru/maps/10758/himki/?from=api-maps&ll=37.275324%2C55.942934&origin=jsapi_2_0&pt=37.276894481446%2C55.94174210357~37.277061724011%2C55.944138040721&z=16"
-							class="delivery__link link" target="_blank">
-							<span>Склад на карте</span>
-						</a>
-					</li>
-					<li class="delivery__item">
-						<p class="delivery__name">По Москве и области</p>
-						<p class="delivery__descr">
-							Стоимость доставки варьируется в зависимости от района. Всего существует 4 зоны.
-						</p>
-						<p class="delivery__descr">
-							Цена указана за 1 газель весом до 1500кг длина 3м.
-						</p>
-						<ul class="delivery__descr">
-							<li>Зеленая: 2800 руб.</li>
-							<li>Синяя: 3000 руб.</li>
-							<li>Красная: 3500 руб.</li>
-							<li>Желтая: 1000-2000 руб.</li>
-						</ul>
-						<p class="delivery__descr">
-							Выезд за МКАД плюс 28 руб. за 1 км.
-						</p>
-						<button class="delivery__link link map-open">
-							<span>Смотреть зоны доставки</span>
-						</button>
-					</li>
-					<li class="delivery__item">
-						<p class="delivery__name">По регионам</p>
-						<p class="delivery__descr">Доставка по&nbsp;России осуществляется с&nbsp;помощью транспортных компании
-							&laquo;ПЭК&raquo; и&nbsp;&laquo;Деловые линии&raquo;.</p>
-					</li>
-				</ul>
-			</div>
-		</section>
-
-		<!-- гарантии -->
-		<section class="warranty" id="warranty">
-			<div class="container">
-				<div class="warranty__row flex">
-					<div class="warranty__head">
-						<div class="warranty__wrap">
-							<h2 class="warranty__title section-title">Эскпортное качество</h2>
-							<p class="warranty__subtitle">
-								<span>Гарантируем,</span>
-								что наши изделия полностью соответствуют заявленному качеству и&nbsp;НЕ
-								расклеятся/потрескаются/покоробятся в&nbsp;эксплуатации.
+				<h2 class="cooperation__title section-title">
+					Работаем со столярными мастерскими, мебельными фабриками, производствами лестниц
+				</h2>
+				<div class="cooperation__row flex">
+					<p class="cooperation__caption">Оплату можно произвести любым удобным способом:</p>
+					<ul class="cooperation__pay flex">
+						<li class="cooperation__item flex">
+							<div class="cooperation__img">
+								<img loading="lazy" src="media/svg/pay.svg" alt="">
+							</div>
+							<p class="cooperation__text">
+								Безналичный расчет для юридических лиц через банк при выставлении счета.
 							</p>
-						</div>
-					</div>
-					<div class="warranty__swiper swiper">
-						<ol class="warranty__list swiper-wrapper">
-							<li class="warranty__item swiper-slide">
-								<div class="warranty__img">
-									<img loading="lazy" src="media/img/war-1.jpg" alt="">
-								</div>
-								<div class="warranty__text">
-									<p class="warranty__name">
-										Соответствуют геометрическим размерам
-									</p>
-									<p class="warranty__descr">
-										Мы&nbsp;производим мебельные щиты из&nbsp;Дуба и&nbsp;ясеня толщиной 20-40&nbsp;мм, шириной
-										200&#8209;1000 мм, длиной от&nbsp;600 до&nbsp;5&nbsp;000&nbsp;мм. Размеры всех наших изделий
-										не&nbsp;только соответствуют номинальным, но&nbsp;и&nbsp;имеют припуски на&nbsp;форматирование.
-									</p>
-								</div>
-							</li>
-							<li class="warranty__item swiper-slide">
-								<div class="warranty__img">
-									<img loading="lazy" src="media/img/war-2.jpg" alt="">
-								</div>
-								<div class="warranty__text">
-									<p class="warranty__name">
-										Влажность 8&plusmn;2%
-									</p>
-									<p class="warranty__descr">
-										Заготовки для наших клееных изделий сушим в&nbsp;высокотехнологичных камерах KATRES (Чехия).
-										Благодаря
-										мягкому режиму сушки полностью снимаем внутреннее напряжение в&nbsp;доске, что гарантирует
-										стабильность в&nbsp;эксплуатации готовых изделий.
-									</p>
-								</div>
-							</li>
-							<li class="warranty__item swiper-slide">
-								<div class="warranty__img">
-									<img loading="lazy" src="media/img/war-3.jpg" alt="">
-								</div>
-								<div class="warranty__text">
-									<p class="warranty__name">
-										Высокая прочность и&nbsp;долговечность
-									</p>
-									<p class="warranty__descr">
-										Мы&nbsp;производим наши мебельные щиты на&nbsp;оборудовании холодного (ORMA MACCHINE, Италия)
-										и&nbsp;горячего (OTTO, Польша) прессования. Используем самый надежный на&nbsp;сегодняшний день клей
-										Kleiberit (Германия).
-									</p>
-								</div>
-							</li>
-						</ol>
-					</div>
-					<div class="warranty__arrows swiper__arrows flex">
-						<div class="slider-btn slider-btn--prev">
-							<svg viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M9 15L1 8L9 1" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
-							</svg>
-						</div>
-						<div class="slider-btn slider-btn--next">
-							<svg viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M1 1L9 8L1 15" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
-							</svg>
-						</div>
-					</div>
-					<div class="warranty__pagination swiper-pagination"></div>
+						</li>
+						<li class="cooperation__item flex">
+							<div class="cooperation__img">
+								<img loading="lazy" src="media/svg/visa&mc.svg" alt="">
+							</div>
+							<p class="cooperation__text">
+								Банковская карта (Visa/MasterCard).
+							</p>
+						</li>
+						<li class="cooperation__item flex">
+							<div class="cooperation__img">
+								<img loading="lazy" src="media/img/sbp.png" alt="">
+							</div>
+							<p class="cooperation__text">Система быстрых платежей</p>
+						</li>
+					</ul>
+				</div>
+				<div class="cooperation__bottom flex">
+					<p class="cooperation__descr">Действуют специальные предложения</p>
+					<button class="cooperation__btn main-btn main-btn--green legal-open">
+						<span class="btn-blick"></span>
+						<span class="main-btn__text">Получить прайс для юр. лиц</span>
+					</button>
 				</div>
 			</div>
 		</section>
 
 		<!-- склад -->
-		<section class="storage">
+		<section class="storage storage--quiz">
 			<div class="container">
 				<div class="storage__row">
 					<div class="storage--first">
@@ -1327,125 +624,6 @@
 					</div>
 					<div class="storage__img storage--seventh">
 						<img loading="lazy" src="media/img/storage-5.jpg" alt="">
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- вопрос-ответ -->
-		<section class="faq">
-			<div class="container">
-				<h2 class="faq__title section-title">Вопрос-ответ</h2>
-				<ul class="faq__list flex">
-					<li class="faq__item">
-						<button class="faq__question flex">Вы&nbsp;делаете распил по&nbsp;индивидуальным размерам?</button>
-						<p class="faq__answer">
-							К&nbsp;сожалению, мы не&nbsp;распиливаем и&nbsp;не&nbsp;форматируем наши щиты. У&nbsp;нас очень
-							широкий ассортимент ширин и&nbsp;длин, позволяющий выбрать изделие максимально приближенные к&nbsp;нужному
-							именно вам размеру. С&nbsp;учетом нашей минимальной цены, даже более габаритное изделий обойдется вам
-							дешевле, чем у&nbsp;посредников.
-						</p>
-					</li>
-					<li class="faq__item">
-						<button class="faq__question flex">Какой минимальный объем заказа?</button>
-						<p class="faq__answer">
-							Ответ про минимальный объем заказа
-						</p>
-					</li>
-					<li class="faq__item">
-						<button class="faq__question flex">Как проходит самовывоз мебельного щита?</button>
-						<p class="faq__answer">
-							Минимум за&nbsp;1&nbsp;рабочий день, нужно оформить заявку с&nbsp;указанием породы, сорта, размера
-							и&nbsp;количества. Склад отбирает заказ по&nbsp;вашему запросу. Вы&nbsp;приезжаете, принимаете изделия
-							по&nbsp;качеству и&nbsp;количеству, оплачиваете. Погрузка в&nbsp;транспортное средство заказчика
-							осуществляется нашими силами.<br>
-							Изделия отгружаются на&nbsp;условиях 100% оплаты. Вы&nbsp;можете оплатить заказ заранее, либо
-							по&nbsp;факту отгрузки.
-						</p>
-					</li>
-					<li class="faq__item">
-						<button class="faq__question flex">Какой порядок оплаты?</button>
-						<p class="faq__answer">
-							Вы&nbsp;можете оплатить любым удобным способом: безналичный расчет для юридических лиц через банк при
-							выставлении счета: банковской картой (Visa/MasterCard); с&nbsp;использованием системы быстрых платежей.
-						</p>
-					</li>
-				</ul>
-				<div class="faq__img">
-					<img loading="lazy" src="media/img/faq.png" alt="">
-					<div class="faq__label">
-						<b>Александра,</b>
-						менеджер заботы
-						о&nbsp;клиентах &laquo;Термо Вуд&raquo;
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- связаться -->
-		<section class="connect">
-			<div class="container">
-				<h2 class="connect__title section-title">Свяжитесь с нами любимым удобным способом </h2>
-				<div class="connect__row flex">
-					<address class="connect__contacts flex">
-						<p class="connect__subtitle">Приезжайте к нам на&nbsp;склад:</p>
-						<p class="connect__location"> г. Химки, мкр. Сходня, ул. Некрасова, 2.</p>
-						<a href="https://yandex.ru/maps/10758/himki/?from=api-maps&ll=37.275324%2C55.942934&origin=jsapi_2_0&pt=37.276894481446%2C55.94174210357~37.277061724011%2C55.944138040721&z=16"
-							class="connect__link link" target="_blank">
-							<span>Смотреть на карте</span>
-						</a>
-						<p class="connect__subtitle">Звоните</p>
-						<p class="connect__worktime">Пн-Пт 9:00 - 18:00</p>
-						<div class="connect__phone phone-change">
-							<a class="connect__tel" href="tel:+79266217609">+7 926 621-76-09</a>
-							<a class="connect__tel" href="tel:+79256258080">+7 925 625-80-80</a>
-						</div>
-					</address>
-					<div class="connect__callback">
-						<p class="connect__subtitle">Оставьте номер, свяжемся как можно скорее</p>
-						<form action="mailer/send.php" method="post" class="connect__form flex" data-form-validate-js>
-							<input type="hidden" name="formname" value="callback">
-							<label class="connect__label label">Введите номер</label>
-							<input type="tel" name="phone" class="connect__input input" placeholder="+7(___) ___-__-__">
-							<button class="connect__btn main-btn main-btn--green">
-								<span class="btn-blick"></span>
-								<span class="main-btn__text">Оставить заявку</span>
-							</button>
-							<div class="connect__agree agree">
-								<div class="agree__checkbox"></div>
-								<p class="agree__text">
-									Нажимая кнопку вы соглашаетесь с условиями <span class="agree__link conf">Политики
-										конфиденциальности</span>
-								</p>
-							</div>
-						</form>
-						<div class="connect__row flex">
-							<div class="connect__question">
-								<div class="flex">
-									<p><b>Спрашивайте,</b> мы онлайн</p>
-									<a href="#" class="connect__wa">
-										<svg viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M7.99983 0.847656C3.77533 0.847656 0.347656 4.27533 0.347656 8.49983C0.347656 10.1914 0.895194 11.7494 1.82111 13.0181L0.846227 15.9027L3.88662 14.9545C5.07518 15.7113 6.48631 16.152 7.99983 16.152C12.2243 16.152 15.652 12.7243 15.652 8.49983C15.652 4.27533 12.2243 0.847656 7.99983 0.847656ZM11.5032 12.6041C10.1143 13.1606 8.45834 12.6219 6.64657 11.2464C4.83479 9.8709 3.64179 7.93449 3.56166 6.49664C3.48153 5.0588 4.65228 4.3332 5.28885 4.33765C5.92542 4.3421 6.62431 6.37645 6.63321 6.68806C6.64211 7.00412 5.85419 7.56501 5.82303 7.8321C5.79187 8.09919 6.89585 9.41684 7.36326 9.77297C7.82622 10.1246 8.7833 10.8013 9.27742 10.7389C9.76709 10.6722 10.092 9.68839 10.4037 9.62607C10.7153 9.56374 12.4157 10.4095 12.5849 10.6277C12.7541 10.8502 12.7363 12.1145 11.5032 12.6041Z" />
-										</svg>
-									</a>
-								</div>
-								<a href="mailto:termo-wood@bk.ru">termo-wood@bk.ru</a>
-							</div>
-							<div class="connect__social flex">
-								<p class="connect__text">Мы в соц.сетях</p>
-								<a href="#" class="connect__tg">
-									<svg viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M15.4002 1.08139L12.9959 13.6334C12.9959 13.6334 12.6594 14.5037 11.7353 14.0863L6.18786 9.68167L6.16213 9.66869C6.91147 8.97192 12.7221 3.56174 12.9761 3.31651C13.3692 2.9367 13.1251 2.71059 12.6687 2.9975L4.08563 8.64199L0.774306 7.48822C0.774306 7.48822 0.253201 7.29627 0.20307 6.87889C0.152278 6.46083 0.791456 6.23473 0.791456 6.23473L14.2907 0.750767C14.2907 0.750767 15.4002 0.245953 15.4002 1.08139Z" />
-									</svg>
-								</a>
-							</div>
-							<button class="connect__btn main-btn main-btn--green legal-open">
-								<span class="btn-blick"></span>
-								<span class="main-btn__text">Получить прайс для юр.лиц</span>
-							</button>
-						</div>
 					</div>
 				</div>
 			</div>

@@ -315,6 +315,24 @@
 				cursor: pointer;
 			}
 
+			&.burger--active {
+				span {
+					transform: scale(0);
+				}
+
+				&::before {
+					top: 50%;
+					width: 100%;
+					transform: translateY(-50%) rotate(45deg);
+				}
+
+				&::after {
+					bottom: 50%;
+					width: 100%;
+					transform: translateY(50%) rotate(-45deg);
+				}
+			}
+
 		}
 	}
 

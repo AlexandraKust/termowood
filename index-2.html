@@ -94,26 +94,29 @@
 		</div>
 	</nav>
 
-	<section class="hero">
+	<section class="hero hero--ab">
 		<div class="container">
-			<div class="hero__undertitle flex">
-				<div class="hero__icon flex">
-					<img loading="lazy" src="media/svg/check.svg" alt="">
-				</div>
-				<p class="hero__text">Мебельные щиты из {дуба/ясеня} оптом от производителя “Термо Вуд”</p>
-			</div>
 			<h1 class="hero__title animation">
-				На&nbsp;мебельные щиты даем<br>
-				в&nbsp;1,5&nbsp;&ndash;&nbsp;2&nbsp;раза более выгодные цены, чем у&nbsp;посредников
+				Мебельные щиты <b>высшего сорта</b> из&nbsp;дуба и&nbsp;ясеня <b>оптом</b> напрямую от&nbsp;производителя
 			</h1>
-			<p class="hero__subtitle">
-				Европейское качество по российским ценам. <br>
-				Самовывоз со склада в Москве или доставка по РФ и СНГ.
-			</p>
-			<a href="#quiz" class="hero__btn main-btn main-btn--darkgreen" data-anchor-btn-js>
+			<ul class="hero__list flex">
+				<li class="hero__item">
+					<b>Качество</b>&nbsp;&mdash; гарантируем прочность
+					и&nbsp;долговечность наших изделий.
+				</li>
+				<li class="hero__item">
+					<b>Дешевле в&nbsp;1,5-2 раза</b> <br>
+					чем у&nbsp;дилеров и&nbsp;посредников
+				</li>
+				<li class="hero__item">
+					<b>Самовывоз</b> со&nbsp;склада в&nbsp;Москве
+					или <b>доставка</b> по&nbsp;по&nbsp;РФ и&nbsp;СНГ.
+				</li>
+			</ul>
+			<button class="hero__btn main-btn main-btn--darkgreen legal-open">
 				<span class="btn-blick"></span>
-				<span class="main-btn__text">Подобрать и рассчитать</span>
-			</a>
+				<span class="main-btn__text">Прайс-каталог для юрлиц</span>
+			</button>
 		</div>
 		<div class="hero__decor">
 			<img loading="lazy" src="media/svg/wood.svg" alt="">
@@ -424,8 +427,7 @@
 								Получите наш
 								прайс-каталог
 							</p>
-							<form action="mailer/send.php" method="post" class="catalog-sidebar__form"
-								data-download-form-js="files/catalog.pdf">
+							<form action="mailer/send.php" method="post" class="catalog-sidebar__form" data-form-validate-js>
 								<input type="hidden" name="formname" value="catalog">
 								<div class="catalog-sidebar__group">
 									<label class="label">Куда прислать?</label>
@@ -1450,6 +1452,12 @@
 				</div>
 			</div>
 		</section>
+
+		<!-- <section class="">
+			<div class="container">
+				<h2 class="__title section-title"></h2>
+			</div>
+		</section> -->
 	</main>
 
 	<footer class="footer">
@@ -1678,7 +1686,7 @@
 			<h3 class="popup__title">Получите предложение для юрлиц</h3>
 			<form action="mailer/send.php" method="post" class="popup__form" data-download-form-js="files/for-ur.pdf">
 				<input type="hidden" name="formname" value="urface">
-				<div class="popup__group">
+				<div class=" popup__group">
 					<label class="label">Куда прислать?</label>
 					<div class="select-social">
 						<div class="popup__select select">

@@ -12,14 +12,14 @@ $answer_1 = $_POST["quiz1"];
 $question_2 = $_POST['title-2'];
 $answer_2 = $_POST['quiz2'];
 
-$question_2_2 = $_POST['title-2_2'];
-$answer_2_2 = $_POST['quiz2_2'];
-
 $question_3 = $_POST['title-3'];
 $answer_3 = $_POST['quiz3'];
 
-$question_4 = $_POST['title-4'];
+$question_4 = $_POST['title-4-1'];
 $answer_4 = $_POST['quiz4'];
+
+$question_4_2 = $_POST['title-4-2'];
+$answer_4_2 = $_POST['quiz4'];
 
 $question_5 = $_POST['title-5'];
 $answer_5 = $_POST['quiz5'];
@@ -33,9 +33,15 @@ $msg = '
 Пользователь заказал обратный звонок. <br>
 Телефон: <b>' . $phone .' </b><br>
 ';
-} else if ($_POST['formname'] == 'how') {
+} else if ($_POST['formname'] == 'catalog') {
 $msg = '
-Пользователь скачал каталог "Топ-7 советов как выбрать систему отопления раз и навсегда" <br>
+Пользователь скачал каталог "Как правильно выбрать мебельный щит для вашего проекта и сэкономить" <br>
+Телефон: <b> ' . $phone .' </b><br>
+Способ связи: <b> ' . $social . ' </b>
+';
+} else if ($_POST['formname'] == 'urface') {
+$msg = '
+Пользователь скачал каталог для <b>юр. лиц</b><br>
 Телефон: <b> ' . $phone .' </b><br>
 Способ связи: <b> ' . $social . ' </b>
 ';
@@ -43,15 +49,15 @@ $msg = '
 $msg = '
 Пользователь прошёл тест: <br>
 1. ' . $question_1 . ' Ответ: <b>' . $answer_1 . ' </b><br>
-2.1. ' . $question_2 . ' Ответ: <b>' . $answer_2 . ' </b><br>
-2.2. ' . $question_2_2 . ' Ответ: <b>' . $answer_2_2 . ' </b><br>
+2. ' . $question_2 . ' Ответ: <b>' . $answer_2 . ' </b><br>
 3. ' . $question_3 . ' Ответ: <b>' . $answer_3 . ' </b><br>
-4. ' . $question_4 . ' Ответ: <b>' . $answer_4 . ' </b><br>
+4.1. ' . $question_4 . ' Ответ: <b>' . $answer_4 . ' </b><br>
+4.2. ' . $question_4_2 . ' Ответ: <b>' . $answer_4_2 . ' </b><br>
 5. ' . $question_5 . ' Ответ: <b>' . $answer_5 . ' </b><br>
-6. ' . $question_6 . ' Ответ: <b>' . $answer_6 . ' </b><br>
 <br>
-Телефон: <b> ' . $phone .' </b><br>
-Способ связи: <b> ' . $social . ' </b>
+' . $question_6 . ' Ответ: <b>' . $answer_6 . ' </b><br>
+<br>
+Контакт: <b> ' . $phone .' ' . $email .' </b><br>
 ';
 }
 

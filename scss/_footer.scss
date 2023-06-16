@@ -56,6 +56,18 @@
 	}
 }
 
+.footer--fixed {
+	position: relative;
+	margin-top: -11.9rem;
+	background: transparent;
+
+	.footer__descr,
+	.footer__text,
+	.footer__author {
+		color: #fff;
+	}
+}
+
 @media (max-width: 768px) {
 	.footer {
 		padding: 6.4rem 0 5.4rem;
@@ -84,9 +96,10 @@
 		&__link {
 			text-align: left;
 		}
+	}
 
-		&__text {}
-
-		&__author {}
+	.footer--fixed {
+		margin-top: -20.9rem;
+		padding: 2.2rem 0;
 	}
 }
