@@ -1045,20 +1045,20 @@ button {
     bottom: 1rem;
   }
   .sidemenu {
-    width: 8rem;
+    width: 6rem;
   }
   .sidemenu__close {
-    width: 3rem;
-    height: 3rem;
-    margin-bottom: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 1rem;
   }
   .sidemenu__body {
     gap: 0.4rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
   .sidemenu__item {
-    height: 9rem;
-    padding: 0.8rem;
+    height: 6rem;
+    padding: 0.3rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1071,15 +1071,15 @@ button {
             justify-content: center;
   }
   .sidemenu__icon {
-    width: 2rem;
+    width: 1.5rem;
     margin-bottom: 0.3rem;
   }
   .sidemenu__name {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
   }
   .sidemenu__top {
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
   }
   .sidemenu__top svg {
     width: 1.5rem;

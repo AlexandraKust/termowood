@@ -15,11 +15,13 @@ $answer_2 = $_POST['quiz2'];
 $question_3 = $_POST['title-3'];
 $answer_3 = $_POST['quiz3'];
 
-$question_4 = $_POST['title-4-1'];
-$answer_4 = $_POST['quiz4'];
+$question_4_1 = $_POST['title-4-1'];
+$answer_4_1 = $_POST['quiz4-1'];
 
 $question_4_2 = $_POST['title-4-2'];
-$answer_4_2 = $_POST['quiz4'];
+$answer_4_2 = $_POST['quiz4-2'];
+
+$answer_4 = $_POST['quiz4'];
 
 $question_5 = $_POST['title-5'];
 $answer_5 = $_POST['quiz5'];
@@ -50,9 +52,15 @@ $msg = '
 Пользователь прошёл тест: <br>
 1. ' . $question_1 . ' Ответ: <b>' . $answer_1 . ' </b><br>
 2. ' . $question_2 . ' Ответ: <b>' . $answer_2 . ' </b><br>
-3. ' . $question_3 . ' Ответ: <b>' . $answer_3 . ' </b><br>
-4.1. ' . $question_4 . ' Ответ: <b>' . $answer_4 . ' </b><br>
-4.2. ' . $question_4_2 . ' Ответ: <b>' . $answer_4_2 . ' </b><br>
+3. ' . $question_3 . ' Ответ: <b>' . $answer_3 . ' </b><br> 
+'
+if ($_POST['quiz4']) {
+'4.1. ' . $question_4_1 . ' Ответ: <b>' . $answer_4_1 . ' </b><br>
+4.2. ' . $question_4_2 . ' Ответ: <b>' . $answer_4_2 . ' </b><br>'
+} else {
+'4. ' . $answer_4 . ''
+}
+'
 5. ' . $question_5 . ' Ответ: <b>' . $answer_5 . ' </b><br>
 <br>
 ' . $question_6 . ' Ответ: <b>' . $answer_6 . ' </b><br>

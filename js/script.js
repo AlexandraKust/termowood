@@ -5,10 +5,11 @@ let phoneChanges = document.querySelectorAll('.phone-change');
 phoneChanges.forEach(function (phoneChange) {
 	let phoneFirst = phoneChange.firstElementChild;
 	let phoneLast = phoneChange.lastElementChild;
+
 	let currentdate = new Date();
 	var oneJan = new Date(currentdate.getFullYear(), 0, 1);
 	var numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
-	var result = Math.ceil((currentdate.getDay() + 1 + numberOfDays) / 7);
+	var result = Math.ceil((numberOfDays + 1) / 7);
 	if (result % 2 === 1) {
 		phoneFirst.classList.add('d-none');
 	} else {
@@ -356,7 +357,6 @@ function btnActive(isValid) {
 
 let quizSingle = document.querySelectorAll('[data-quiz-single-answer]');
 quizSingle.forEach(function (item) {
-	// let inputs = item.querySelectorAll('input[type="radio"]');
 	let inputs = item.querySelectorAll('input');
 
 	for (let i = 0; i < inputs.length; i++) {
@@ -449,7 +449,6 @@ function btnClick() {
 btnClick();
 
 var quizFinalStep = function () {
-	// $('.quiz__loader').addClass('visible');
 	$('.quiz__body').addClass('blur');
 
 	setTimeout(function () {
@@ -458,7 +457,6 @@ var quizFinalStep = function () {
 
 	setTimeout(function () {
 		$('.quiz__body').removeClass('blur');
-		// $('.quiz__loader').removeClass('visible');
 	}, 1000)
 }
 
@@ -514,7 +512,8 @@ if (sliderRowOfNumbers.length > 0 && sliderWidth) {
 
 	sliderWidth.max = valuesOfWidth.length - 1;
 	sliderWidth.oninput = function () {
-		// console.log(valuesOfWidth[this.value]);
+		let quizValue = sliderWidth.nextElementSibling;
+		quizValue.value = valuesOfWidth[this.value];
 	};
 	sliderWidth.oninput();
 }
@@ -537,7 +536,8 @@ if (sliderRowOfNumbers.length > 0 && sliderLenght) {
 
 	sliderLenght.max = valuesOfLenght.length - 1;
 	sliderLenght.oninput = function () {
-		// console.log(valuesOfLenght[this.value]);
+		let quizValue = sliderLenght.nextElementSibling;
+		quizValue.value = valuesOfLenght[this.value];
 	};
 	sliderLenght.oninput();
 }
@@ -760,15 +760,17 @@ if (sideMenu) {
 	let sideClose = sideMenu.querySelector('.sidemenu__close');
 	let sideBody = sideMenu.querySelector('.sidemenu__body');
 	let sideTop = sideMenu.querySelector('.sidemenu__top');
-	sideBody.style.maxHeight = sideBody.scrollHeight + "rem";
+	sideBody.style.maxHeight = sideBody.scrollHeight + "px";
 
 	window.addEventListener('resize', function () {
-		sideBody.style.maxHeight = sideBody.scrollHeight + "rem";
+		if (!sideMenu.classList.contains('hidden')) {
+			sideBody.style.maxHeight = sideBody.scrollHeight + "px";
+		}
 	})
 
 	sideClose.addEventListener('click', function () {
 		if (sideBody.style.maxHeight == null && !sideTop.classList.contains('active')) {
-			sideBody.style.maxHeight = sideBody.scrollHeight + "rem";
+			sideBody.style.maxHeight = sideBody.scrollHeight + "px";
 		} else {
 			sideBody.style.maxHeight = null;
 			sideMenu.classList.add('hidden');
@@ -793,7 +795,13 @@ if (sideMenu) {
 		if (sideBody.style.maxHeight) {
 			sideBody.style.maxHeight = null;
 		} else {
-			sideBody.style.maxHeight = sideBody.scrollHeight + "rem";
+			sideBody.style.maxHeight = sideBody.scrollHeight + "px";
 		}
 	})
+
+	if (window.innerWidth < 768) {
+		setTimeout(function () {
+			sideTop.click();
+		}, 2000)
+	}
 }

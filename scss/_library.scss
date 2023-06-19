@@ -219,6 +219,7 @@ button {
 	z-index: 20;
 	width: 12.5rem;
 	transform: translateY(-50%);
+	// overflow: hidden;
 
 	&.hidden {
 		pointer-events: none;
@@ -844,39 +845,39 @@ button {
 
 	// липкое правое меню
 	.sidemenu {
-		width: 8rem;
+		width: 6rem;
 
 		&__close {
-			width: 3rem;
-			height: 3rem;
-			margin-bottom: 1.5rem;
+			width: 2.5rem;
+			height: 2.5rem;
+			margin-bottom: 1rem;
 		}
 
 		&__body {
 			gap: 0.4rem;
-			margin-bottom: 1.5rem;
+			margin-bottom: 1rem;
 		}
 
 		&__item {
-			height: 9rem;
-			padding: 0.8rem;
+			height: 6rem;
+			padding: 0.3rem;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 		}
 
 		&__icon {
-			width: 2rem;
+			width: 1.5rem;
 			margin-bottom: 0.3rem;
 		}
 
 		&__name {
-			font-size: 1.2rem;
+			font-size: 0.9rem;
 		}
 
 		&__top {
-			width: 3rem;
-			height: 3rem;
+			width: 2.5rem;
+			height: 2.5rem;
 
 			svg {
 				width: 1.5rem;
