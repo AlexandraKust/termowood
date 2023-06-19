@@ -267,6 +267,10 @@
 	.quiz-option {
 		flex-basis: auto;
 
+		&__label {
+			text-align: center;
+		}
+
 		&:hover {
 			.quiz-option__label {
 				color: $accent-color-2;

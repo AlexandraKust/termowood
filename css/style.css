@@ -3680,6 +3680,9 @@ button {
   -ms-flex-preferred-size: auto;
       flex-basis: auto;
 }
+.quiz-item--final .quiz-option__label {
+  text-align: center;
+}
 .quiz-item--final .quiz-option:hover .quiz-option__label {
   color: #42b214;
 }
